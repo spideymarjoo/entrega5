@@ -1,15 +1,16 @@
-package futbol.presidente;
+package futbol.equipo;
 
-public class presidente {
+
+public class equipo {
     private String nombre;
-    private String dni;
+    private String abreviatura;
 
     // -------------------------nuestro constructor-------------------------
-    public presidente(String nombre, String dni) {
+    public equipo(String nombre, String dni) {
         this.nombre = nombre;
-        this.dni = dni;
+        this.abreviatura = abreviatura;
     }
-
+    
     // -------------------------getters y setters---------------------------
     public String getNombre() {
         return nombre;
@@ -19,12 +20,12 @@ public class presidente {
         this.nombre = nombre;
     }
 
-    public String getDni() {
-        return dni;
+    public String getAbreviatura() {
+        return abreviatura;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setAbreviatura(String abreviatura) {
+        this.abreviatura = abreviatura;
     }
-    
+
 }
