@@ -1,0 +1,10 @@
+package futbol.jugador;
+
+public enum Traspaso {
+    SIN_SOLICITAR,
+    SOLICITADO,
+    APROBADO_ENTRENADOR,
+    APROBADO_PRESIDENTE,
+    RECHAZADO_ENTRENADOR,
+    RECHAZADO_PRESIDENTE;
+}
