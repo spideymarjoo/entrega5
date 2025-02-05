@@ -1,7 +1,11 @@
 
+import futbol.entrenador.entrenador;
+import futbol.entrenador.formaciones;
+import futbol.equipo.equipo;
 import futbol.jugador.Posicion;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
+import futbol.presidente.presidente;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -24,6 +28,27 @@ public class App {
         jugador j9 = new jugador( "Cristian Cueva", fechanacimiento(1991, 6, 28), "Peru", Posicion.CENTROCAMPISTA, 6, Traspaso.SIN_SOLICITAR);
         jugador j10 = new jugador( "Yosimar Yotun", fechanacimiento(1992, 12, 21), "Peru", Posicion.CENTROCAMPISTA, 17, Traspaso.SIN_SOLICITAR);
         jugador j11 = new jugador( "Pedro Gallese", fechanacimiento(1992, 2, 30), "Peru", Posicion.PORTERO, 1, Traspaso.SIN_SOLICITAR);
+
+        presidente presi1 = new presidente("Florentino Perez", "A12B");
+        presidente presi2 = new presidente("Johan Laporta", "A23E");
+        presidente presi3 = new presidente("Nasser Alkhela", "A34C");
+        presidente presi4 = new presidente("Fernando Cabada", "A56D");
+        presidente presi5 = new presidente("Enrique Cerezo", "A78F");
+
+        entrenador e1 = new entrenador("Hansi Flick", formaciones.CUATRO_TRES_TRES, "F47C");
+        entrenador e2 = new entrenador("Carlo Ancelotti", formaciones.CINCO_TRES_DOS, "O98A");
+        entrenador e3 = new entrenador("Luis Marinez", formaciones.CUATRO_CUATRO_DOS, "Y12M");
+        entrenador e4 = new entrenador("Nestor Gorosito", formaciones.CUATRO_CINCO_UNO, "Z19N");
+        entrenador e5 = new entrenador("Xolo Simeone", formaciones.CINCO_TRES_DOS, "Y28Y");
+
+        equipo equi1 = new equipo("Barcelona", "BCN");
+        equipo equi2 = new equipo("Real Madrid", "RMCF");
+        equipo equi3 = new equipo("Alianza Lima", "AL");
+        equipo equi4 = new equipo("Atletico de Madrird", "ATM");
+        equipo equi5 = new equipo("Paris Saint Germain", "PSG");
+
+
+
 
     }
     
