@@ -16,7 +16,7 @@ public class jugador {
         this.posicion = posicion;
         this.dorsal = dorsal_jugador;
         this.traspaso = traspaso_jugador;
-        
+
     }
 //-------------------------------- Setters and Getters---------------------------------------
     public String getNombre() {
@@ -24,6 +24,9 @@ public class jugador {
     }
 
     public void setNombre(String nombre) {
+        if(nombre.equals(null)){
+            return;
+        }
         this.nombre = nombre;
     }
 
@@ -32,6 +35,9 @@ public class jugador {
     }
 
     public void setFecha_nacimiento(Date fecha_nacimiento) {
+        if(fecha_nacimiento == null){
+            return;
+        }
         this.fecha_nacimiento = fecha_nacimiento;
     }
 
@@ -40,6 +46,9 @@ public class jugador {
     }
 
     public void setPais(String pais) {
+        if(pais.equals(null)){
+            return;
+        }
         this.pais = pais;
     }
 
@@ -48,6 +57,9 @@ public class jugador {
     }
 
     public void setPosicion(Posicion posicion) {
+        if(posicion == null){
+            return;
+        }
         this.posicion = posicion;
     }
 
@@ -56,6 +68,9 @@ public class jugador {
     }
 
     public void setDorsal(int dorsal) {
+        if(dorsal < 1){
+            return;
+        }
         this.dorsal = dorsal;
     }
 
@@ -64,6 +79,9 @@ public class jugador {
     }
 
     public void setTraspaso(Traspaso traspaso) {
+        if(traspaso == null){
+            return;
+        }
         this.traspaso = traspaso;
     }
     
