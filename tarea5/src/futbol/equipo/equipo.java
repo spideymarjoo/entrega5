@@ -6,7 +6,7 @@ public class equipo {
     private String abreviatura;
 
     // -------------------------nuestro constructor-------------------------
-    public equipo(String nombre, String dni) {
+    public equipo(String nombre, String abreviatura) {
         this.nombre = nombre;
         this.abreviatura = abreviatura;
     }
