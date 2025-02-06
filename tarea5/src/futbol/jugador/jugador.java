@@ -6,7 +6,7 @@ public class jugador {
     private Date fecha_nacimiento;
     private String pais;
     private Posicion posicion;
-    private int dorsal;
+    private int numdorsal;
     public Traspaso traspaso;
 // --------------------------------------------Nuestro Constructor----------------------------------------
     public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador, Traspaso traspaso_jugador){
@@ -14,9 +14,9 @@ public class jugador {
         this.fecha_nacimiento = fecha_nacimiento;
         this.pais = pais;
         this.posicion = posicion;
-        this.dorsal = dorsal_jugador;
+        this.numdorsal = dorsal_jugador;
         this.traspaso = traspaso_jugador;
-        
+
     }
 //-------------------------------------------- Setters and Getters---------------------------------------
     public String getNombre() {
@@ -24,7 +24,11 @@ public class jugador {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if(nombre != null){
+            this.nombre = nombre;
+        }else{
+            System.out.println("Nombre inválido");
+        }
     }
 
     public Date getFecha_nacimiento() {
@@ -32,7 +36,11 @@ public class jugador {
     }
 
     public void setFecha_nacimiento(Date fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
+        if(fecha_nacimiento != null){
+            this.fecha_nacimiento = fecha_nacimiento;
+        }else{
+            System.out.println("Fecha de nacimiento inválida");
+        }
     }
 
     public String getPais() {
@@ -40,7 +48,11 @@ public class jugador {
     }
 
     public void setPais(String pais) {
-        this.pais = pais;
+        if(pais != null){
+            this.pais = pais;
+        }else{
+            System.out.println("País no reconocido");
+        }
     }
 
     public Posicion getPosicion() {
@@ -48,15 +60,23 @@ public class jugador {
     }
 
     public void setPosicion(Posicion posicion) {
-        this.posicion = posicion;
+        if(posicion != null){
+            this.posicion = posicion;
+        }else
+        System.out.println("Posicion invalida");
     }
 
     public int getDorsal() {
-        return dorsal;
+        return numdorsal;
     }
 
     public void setDorsal(int dorsal) {
-        this.dorsal = dorsal;
+        if(dorsal >= 1){
+            this.numdorsal = dorsal;
+        }else{
+            System.out.println("Error, ...");
+            this.numdorsal = 0;
+        }
     }
 
     public Traspaso getTraspaso() {
@@ -64,10 +84,14 @@ public class jugador {
     }
 
     public void setTraspaso(Traspaso traspaso) {
-        this.traspaso = traspaso;
+        if(traspaso != null){
+            this.traspaso = traspaso;
+        }else{
+            System.out.println("Error de traspaso");
+        }
     }
-    
 
+    
     
 }
 
