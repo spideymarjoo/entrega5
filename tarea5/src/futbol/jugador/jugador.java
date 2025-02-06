@@ -18,7 +18,7 @@ public class jugador {
         this.traspaso = traspaso_jugador;
         
     }
-//-------------------------------- Setters and Getters---------------------------------------
+//-------------------------------------------- Setters and Getters---------------------------------------
     public String getNombre() {
         return nombre;
     }
