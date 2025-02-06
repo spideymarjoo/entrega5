@@ -35,11 +35,11 @@ public class App {
         presidente presi4 = new presidente("Fernando Cabada", "A56D");
         presidente presi5 = new presidente("Enrique Cerezo", "A78F");
 
-        entrenador e1 = new entrenador("Hansi Flick", formaciones.CUATRO_TRES_TRES, "F47C");
-        entrenador e2 = new entrenador("Carlo Ancelotti", formaciones.CINCO_TRES_DOS, "O98A");
-        entrenador e3 = new entrenador("Luis Marinez", formaciones.CUATRO_CUATRO_DOS, "Y12M");
-        entrenador e4 = new entrenador("Nestor Gorosito", formaciones.CUATRO_CINCO_UNO, "Z19N");
-        entrenador e5 = new entrenador("Xolo Simeone", formaciones.CINCO_TRES_DOS, "Y28Y");
+        entrenador e1 = new entrenador("Hansi Flick", formaciones.CUATRO_TRES_TRES,null);
+        entrenador e2 = new entrenador("Carlo Ancelotti", formaciones.CINCO_TRES_DOS,null);
+        entrenador e3 = new entrenador("Luis Marinez", formaciones.CUATRO_CUATRO_DOS,null);
+        entrenador e4 = new entrenador("Nestor Gorosito", formaciones.CUATRO_CINCO_UNO,null);
+        entrenador e5 = new entrenador("Xolo Simeone", formaciones.CINCO_TRES_DOS,null);
 
         equipo equi1 = new equipo("Barcelona", "BCN",null,null,null);
         equipo equi2 = new equipo("Real Madrid", "RMCF",null,null,null);
