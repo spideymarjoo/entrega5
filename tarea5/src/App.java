@@ -17,7 +17,7 @@ public class App {
     }
     public static void main(String[] args) throws Exception {
     
-        jugador j1 = new jugador( "Lamine Yamal", fechanacimiento(2007, 11, 20), "Espania", Posicion.DELANTERO, 19, Traspaso.SIN_SOLICITAR);
+        jugador j1 = new jugador( "Lamine Yamal", fechanacimiento(2007, 11, 20), "Espania", Posicion.DELANTERO, -10, Traspaso.SIN_SOLICITAR);
         jugador j2 = new jugador( "Paolo Guerreo", fechanacimiento(1986, 10, 06), "Peru", Posicion.DELANTERO, 9, Traspaso.SIN_SOLICITAR);
         jugador j3 = new jugador( "Jefferson Farfan", fechanacimiento(1988, 10, 26), "Peru", Posicion.DELANTERO, 10, Traspaso.SIN_SOLICITAR);
         jugador j4 = new jugador( "Kounde Quispe", fechanacimiento(1998, 4, 16), "Bolivia", Posicion.CENTROCAMPISTA, 12, Traspaso.SIN_SOLICITAR);
@@ -41,13 +41,13 @@ public class App {
         entrenador e4 = new entrenador("Nestor Gorosito", formaciones.CUATRO_CINCO_UNO, "Z19N");
         entrenador e5 = new entrenador("Xolo Simeone", formaciones.CINCO_TRES_DOS, "Y28Y");
 
-        equipo equi1 = new equipo("Barcelona", "BCN");
-        equipo equi2 = new equipo("Real Madrid", "RMCF");
-        equipo equi3 = new equipo("Alianza Lima", "AL");
-        equipo equi4 = new equipo("Atletico de Madrird", "ATM");
-        equipo equi5 = new equipo("Paris Saint Germain", "PSG");
+        equipo equi1 = new equipo("Barcelona", "BCN",null,null,null);
+        equipo equi2 = new equipo("Real Madrid", "RMCF",null,null,null);
+        equipo equi3 = new equipo("Alianza Lima", "AL",null,null,null);
+        equipo equi4 = new equipo("Atletico de Madrird", "ATM",null,null,null);
+        equipo equi5 = new equipo("Paris Saint Germain", "PSG",null,null,null);
 
-
+        
 
 
     }
