@@ -29,11 +29,11 @@ public class App {
         jugador j10 = new jugador( "Yosimar Yotun", fechanacimiento(1992, 12, 21), "Peru", Posicion.CENTROCAMPISTA, 17, Traspaso.SIN_SOLICITAR);
         jugador j11 = new jugador( "Pedro Gallese", fechanacimiento(1992, 2, 30), "Peru", Posicion.PORTERO, 1, Traspaso.SIN_SOLICITAR);
 
-        presidente presi1 = new presidente("Florentino Perez", "A12B");
-        presidente presi2 = new presidente("Johan Laporta", "A23E");
-        presidente presi3 = new presidente("Nasser Alkhela", "A34C");
-        presidente presi4 = new presidente("Fernando Cabada", "A56D");
-        presidente presi5 = new presidente("Enrique Cerezo", "A78F");
+        presidente presi1 = new presidente("Florentino Perez", "A12B",null);
+        presidente presi2 = new presidente("Johan Laporta", "A23E",null);
+        presidente presi3 = new presidente("Nasser Alkhela", "A34C",null);
+        presidente presi4 = new presidente("Fernando Cabada", "A56D",null);
+        presidente presi5 = new presidente("Enrique Cerezo", "A78F",null);
 
         entrenador e1 = new entrenador("Hansi Flick", formaciones.CUATRO_TRES_TRES,null);
         entrenador e2 = new entrenador("Carlo Ancelotti", formaciones.CINCO_TRES_DOS,null);

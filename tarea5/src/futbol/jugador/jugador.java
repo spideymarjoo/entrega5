@@ -90,8 +90,11 @@ public class jugador {
             System.out.println("Error de traspaso");
         }
     }
-
-    
+    @Override
+    public String toString() {
+        return "jugador [nombre=" + nombre + ", fecha_nacimiento=" + fecha_nacimiento + ", pais=" + pais + ", posicion="
+                + posicion + ", numdorsal=" + numdorsal + ", traspaso=" + traspaso + "]";
+    }
     
 }
 
