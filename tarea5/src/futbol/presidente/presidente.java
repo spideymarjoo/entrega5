@@ -6,12 +6,28 @@ public class presidente {
     private String nombre;
     private String dni;
     private equipo equipoID;
+    private static int presidentesTotales = 0;
 
     // -------------------------nuestro constructor-------------------------
     public presidente(String nombre, String dni, equipo equipoID) {
-        this.nombre = nombre;
-        this.dni = dni;
-        this.equipoID = equipoID;
+        if (nombre != null) {
+            this.nombre = nombre;
+        } else {
+            System.out.println("Nombre no reconocido");
+            this.nombre = "No existente";
+        }
+        if (dni != null) {
+            this.dni = dni;
+        } else {
+            System.out.println("DNI no reconocido");
+            this.dni = "No existente";
+        }
+        presidentesTotales++;
+    }
+
+    // ----------------------uso de atributos y metodo static---------------------
+    public static int getpresidentesTotales() {
+        return presidentesTotales; 
     }
 
     // -------------------------getters y setters---------------------------

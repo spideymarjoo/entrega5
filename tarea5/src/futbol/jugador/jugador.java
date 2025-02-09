@@ -50,11 +50,6 @@ public class jugador {
         jugadoresTotales++;
 
     }
-//-------------------Uso de atributos y metodo static-----------------------------
-    public static int getjugadoresTotales() {
-        return jugadoresTotales;
-    }
-//-------------------------------- Setters and Getters---------------------------------------
     public String getNombre() {
         return nombre;
     }
