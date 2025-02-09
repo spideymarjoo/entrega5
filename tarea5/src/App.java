@@ -6,7 +6,6 @@ import futbol.jugador.Posicion;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
 import futbol.presidente.presidente;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
