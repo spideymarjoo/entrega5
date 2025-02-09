@@ -17,7 +17,7 @@ public class App {
     }
     public static void main(String[] args) throws Exception {
     
-        jugador j1 = new jugador( "Lamine Yamal", fechanacimiento(2007, 11, 20), "Espania", Posicion.DELANTERO, -10, Traspaso.SIN_SOLICITAR);
+        jugador j1 = new jugador( "Lamine Yamal", fechanacimiento(2007, 11, 20), "Espania", Posicion.DELANTERO, 10, Traspaso.SIN_SOLICITAR);
         jugador j2 = new jugador( "Paolo Guerreo", fechanacimiento(1986, 10, 06), "Peru", Posicion.DELANTERO, 9, Traspaso.SIN_SOLICITAR);
         jugador j3 = new jugador( "Jefferson Farfan", fechanacimiento(1988, 10, 26), "Peru", Posicion.DELANTERO, 10, Traspaso.SIN_SOLICITAR);
         jugador j4 = new jugador( "Pau Cubarsi", fechanacimiento(2007, 19, 11), "Espania", Posicion.DEFENSA, 8, Traspaso.SIN_SOLICITAR);
@@ -46,9 +46,11 @@ public class App {
         equipo equi4 = new equipo("Atletico de Madrird", "ATM",null,null,null);
         equipo equi5 = new equipo("Paris Saint Germain", "PSG",null,null,null);
 
-        
-
-
+        // ----------------------------------------- pruebas de impresiones -----------------------------------------------
+        System.out.println(j1);
+        System.out.println(presi1);
+        System.out.println(e1);
+        System.out.println(equi1);
     }
     
     
