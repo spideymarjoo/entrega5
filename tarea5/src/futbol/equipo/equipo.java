@@ -85,7 +85,7 @@ public class equipo {
         }else{
             System.out.println("Lista de jugadores invalida");
         }
-       
+
     }
 
     @Override
