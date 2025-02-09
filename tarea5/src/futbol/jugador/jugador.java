@@ -8,15 +8,51 @@ public class jugador {
     private Posicion posicion;
     private int numdorsal;
     public Traspaso traspaso;
+    private static int jugadoresTotales = 0;
 // --------------------------------------------Nuestro Constructor----------------------------------------
     public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador, Traspaso traspaso_jugador){
-        this.nombre = nombre_jugador;
-        this.fecha_nacimiento = fecha_nacimiento;
-        this.pais = pais;
-        this.posicion = posicion;
-        this.numdorsal = dorsal_jugador;
-        this.traspaso = traspaso_jugador;
+        if(nombre_jugador != null){
+            this.nombre = nombre_jugador;
+        }else{
+            System.out.println("Nombre no reconocido");
+            this.nombre = "No reconocido";
+        }    
+        if(fecha_nacimiento != null){
+            this.fecha_nacimiento = fecha_nacimiento;
+        }else{
+            System.out.println("FechaNacimiento no reconocido");
+            this.fecha_nacimiento = new Date();
+        }
+        if(pais != null){
+            this.pais = pais;
+        }else{
+            System.out.println("Pais no reconocido");
+            this.pais = "Desconocido";
+        }
+        if(posicion != null){
+            this.posicion = posicion;
+        }else{
+            System.out.println("Posicion no reconocida");
+            this.posicion = posicion.RESERVA;
+        }
+        if(dorsal_jugador >= 1){
+            this.numdorsal = dorsal_jugador;
+        }else{
+            System.out.println("Error dorsal");
+            this.numdorsal = 0;
+        }
+        if(traspaso_jugador != null){
+            this.traspaso = traspaso_jugador;
+        }else{
+            System.out.println("Error traspaso");
+            this.traspaso = traspaso.SIN_SOLICITAR;
+        }
+        jugadoresTotales++;
 
+    }
+    //------------------------- Uso de atributos y metodo static-----------------
+    public static int getjugadoresTotales() {
+        return jugadoresTotales;
     }
 //-------------------------------- Setters and Getters---------------------------------------
     public String getNombre() {
