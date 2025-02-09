@@ -6,7 +6,7 @@ public class presidente {
     private String nombre;
     private String dni;
     private equipo equipoID;
-    private static int presidentesTotales;
+    private static int presidentesTotales = 0;
 
     // -------------------------nuestro constructor-------------------------
     public presidente(String nombre, String dni, equipo equipoID) {
@@ -23,6 +23,11 @@ public class presidente {
             this.dni = "No existente";
         }
         presidentesTotales++;
+    }
+
+    // ----------------------uso de atributos y metodo static---------------------
+    public static int getpresidentesTotales() {
+        return presidentesTotales; 
     }
 
     // -------------------------getters y setters---------------------------

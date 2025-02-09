@@ -6,7 +6,7 @@ public class entrenador {
     private String nombre;
     private formaciones formacionPreferida;
     private equipo equipoID;
-    private static int entrenadoresTotales;
+    private static int entrenadoresTotales = 0;
 
 
     // -------------------------nuestro constructor-------------------------
@@ -26,6 +26,10 @@ public class entrenador {
         entrenadoresTotales++;
     }
 
+    // ----------------------uso de atributos y metodo static---------------------
+    public static int getentrenadoresTotales() {
+        return entrenadoresTotales;
+    }
     // -------------------------getters y setters---------------------------
     public String getNombre() {
         return nombre;
