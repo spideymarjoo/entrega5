@@ -22,7 +22,11 @@ public class entrenador {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if(nombre != null){
+            this.nombre = nombre;
+        }else{
+            System.out.println("Nombre incorrecto");        
+        }
     }
 
     public formaciones getFormacionPreferida() {
@@ -30,7 +34,11 @@ public class entrenador {
     }
 
     public void setFormacionPreferida(formaciones formacionPreferida) {
-        this.formacionPreferida = formacionPreferida;
+        if(formacionPreferida != null){
+            this.formacionPreferida = formacionPreferida;
+        }else{
+            System.out.println("Formacion no reconocida");
+        }
     }
 
     public equipo getEquipoID() {
@@ -38,8 +46,20 @@ public class entrenador {
     }
 
     public void setEquipoID(equipo equipoID) {
-        this.equipoID = equipoID;
+        if(equipoID != null){
+            this.equipoID = equipoID;
+        }else{
+            System.out.println("Equipo no reconocido");
+        }
+        
     }
+
+    @Override
+    public String toString() {
+        return "entrenador [nombre=" + nombre + ", formacionPreferida=" + formacionPreferida + ", equipoID=" + equipoID
+                + "]";
+    }
+    
     
 
 }
