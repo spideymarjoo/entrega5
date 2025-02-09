@@ -69,6 +69,8 @@ public class presidente {
         }
     }
 
+    // --------------------------------------------metodo toString---------------------------------------------
+
     @Override
     public String toString() {
         return "presidente [nombre=" + nombre + ", dni=" + dni + ", equipoID=" + equipoID + "]";

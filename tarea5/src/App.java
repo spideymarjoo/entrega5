@@ -40,11 +40,11 @@ public class App {
         entrenador e4 = new entrenador("Nestor Gorosito", formaciones.CUATRO_CINCO_UNO,null);
         entrenador e5 = new entrenador("Xolo Simeone", formaciones.CINCO_TRES_DOS,null);
 
-        equipo equi1 = new equipo("Barcelona", "BCN",null,null,null);
-        equipo equi2 = new equipo("Real Madrid", "RMCF",null,null,null);
-        equipo equi3 = new equipo("Alianza Lima", "AL",null,null,null);
-        equipo equi4 = new equipo("Atletico de Madrird", "ATM",null,null,null);
-        equipo equi5 = new equipo("Paris Saint Germain", "PSG",null,null,null);
+        equipo equi1 = new equipo("Barcelona", "BCN",null,null,null, null);
+        equipo equi2 = new equipo("Real Madrid", "RMCF",null,null,null, null);
+        equipo equi3 = new equipo("Alianza Lima", "AL",null,null,null, null);
+        equipo equi4 = new equipo("Atletico de Madrird", "ATM",null,null,null, null);
+        equipo equi5 = new equipo("Paris Saint Germain", "PSG",null,null,null, null);
 
         // ----------------------------------------- pruebas de impresiones -----------------------------------------------
         System.out.println(j1);
