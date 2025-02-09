@@ -50,7 +50,7 @@ public class jugador {
         jugadoresTotales++;
 
     }
-    //------------------------- Uso de atributos y metodo static-----------------
+//-------------------Uso de atributos y metodo static-----------------------------
     public static int getjugadoresTotales() {
         return jugadoresTotales;
     }
