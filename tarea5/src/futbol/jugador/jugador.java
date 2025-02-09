@@ -1,4 +1,5 @@
 package futbol.jugador;
+import futbol.equipo.equipo;
 import java.util.Date;
 
 public class jugador {
@@ -7,10 +8,11 @@ public class jugador {
     private String pais;
     private Posicion posicion;
     private int numdorsal;
+    private equipo equipoID;
     public Traspaso traspaso;
     private static int jugadoresTotales = 0;
 // --------------------------------------------Nuestro Constructor----------------------------------------
-    public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador, Traspaso traspaso_jugador){
+    public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador, Traspaso traspaso_jugador, equipo equipoID) {
         if(nombre_jugador != null){
             this.nombre = nombre_jugador;
         }else{
@@ -48,8 +50,15 @@ public class jugador {
             this.traspaso = traspaso.SIN_SOLICITAR;
         }
         jugadoresTotales++;
-
     }
+
+    // ----------------------uso de atributos y metodo static---------------------
+    public static int jugadoresTotales() {
+        return jugadoresTotales;  
+    }
+
+    // ---------------------------getters y setters ---------------------------------
+
     public String getNombre() {
         return nombre;
     }
@@ -61,6 +70,19 @@ public class jugador {
             System.out.println("Nombre inválido");
         }
     }
+
+    public equipo getEquipoID() {
+        return equipoID;
+    }
+
+    public void setEquipoID(equipo equipoID) {
+        if(equipoID !=null){
+            this.equipoID = equipoID;
+        }else{
+            System.out.println("Equipo no reconocido");
+        }
+    }
+
 
     public Date getFecha_nacimiento() {
         return fecha_nacimiento;
@@ -121,6 +143,8 @@ public class jugador {
             System.out.println("Error de traspaso");
         }
     }
+    
+    // --------------------------------------------metodo toString---------------------------------------------
     @Override
     public String toString() {
         return "jugador [nombre=" + nombre + ", fecha_nacimiento=" + fecha_nacimiento + ", pais=" + pais + ", posicion="

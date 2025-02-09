@@ -30,6 +30,7 @@ public class entrenador {
     public static int getentrenadoresTotales() {
         return entrenadoresTotales;
     }
+
     // -------------------------getters y setters---------------------------
     public String getNombre() {
         return nombre;
@@ -67,6 +68,8 @@ public class entrenador {
         }
         
     }
+
+    // --------------------------------------------metodo toString---------------------------------------------
 
     @Override
     public String toString() {
