@@ -6,6 +6,7 @@ import futbol.jugador.Posicion;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
 import futbol.presidente.presidente;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -46,6 +47,69 @@ public class App {
         equipo equi4 = new equipo("Atletico de Madrird", "ATM",null,null,null);
         equipo equi5 = new equipo("Paris Saint Germain", "PSG",null,null,null);
 
+        ArrayList<jugador> jugadoresBarcelona = new ArrayList<jugador>();
+        jugadoresBarcelona.add(j1);
+        jugadoresBarcelona.add(j4);
+
+        ArrayList<jugador>jugadoresRealMadrid = new ArrayList<jugador>();
+        jugadoresRealMadrid.add(j5);
+        jugadoresRealMadrid.add(j7);
+
+        ArrayList<jugador> jugadoresAlianzaLima = new ArrayList<jugador>();
+        jugadoresAlianzaLima.add(j9);
+        jugadoresAlianzaLima.add(j10);
+
+        ArrayList<jugador> jugadoresAtletico = new ArrayList<jugador>();
+        jugadoresAtletico.add(j8);
+        jugadoresAtletico.add(j2);
+
+        ArrayList<jugador> jugadoresPSG = new ArrayList<jugador>();
+        jugadoresPSG.add(j3);
+        jugadoresPSG.add(j6);
+
+        equi1.setPresidenteID(presi2);
+        equi1.setEntrenadorID(e1);
+        equi1.setLista_jugadores(jugadoresBarcelona);
+
+        equi2.setPresidenteID(presi1);
+        equi2.setEntrenadorID(e2);
+        equi2.setLista_jugadores(jugadoresRealMadrid);
+
+        equi3.setPresidenteID(presi4);
+        equi3.setEntrenadorID(e4);
+        equi3.setLista_jugadores(jugadoresAlianzaLima);
+
+        equi4.setPresidenteID(presi5);
+        equi4.setEntrenadorID(e5);
+        equi4.setLista_jugadores(jugadoresAtletico);
+
+        equi5.setPresidenteID(presi3);
+        equi5.setEntrenadorID(e3);
+        equi5.setLista_jugadores(jugadoresPSG);
+
+        presi1.setEquipoID(equi2);
+        presi2.setEquipoID(equi1);
+        presi3.setEquipoID(equi5);
+        presi4.setEquipoID(equi3);
+        presi5.setEquipoID(equi4);
+
+        e1.setEquipoID(equi1);
+        e2.setEquipoID(equi2);
+        e3.setEquipoID(equi5);
+        e4.setEquipoID(equi3);
+        e5.setEquipoID(equi4);
+
+        j1.setEquipoID(equi1);
+        j2.setEquipoID(equi4);
+        j3.setEquipoID(equi5);
+        j4.setEquipoID(equi1);
+        j5.setEquipoID(equi2);
+        j6.setEquipoID(equi5);
+        j7.setEquipoID(equi2);
+        j8.setEquipoID(equi4);
+        j9.setEquipoID(equi3);
+        j10.setEquipoID(equi3);
+        
         // ----------------------------------------- pruebas de impresiones -----------------------------------------------
         System.out.println(j1);
         System.out.println(presi1);
