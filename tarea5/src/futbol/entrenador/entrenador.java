@@ -6,14 +6,24 @@ public class entrenador {
     private String nombre;
     private formaciones formacionPreferida;
     private equipo equipoID;
-
+    private static int entrenadoresTotales;
 
 
     // -------------------------nuestro constructor-------------------------
     public entrenador(String nombre, formaciones formacionPreferida, equipo equipoID) {
-        this.nombre = nombre;
-        this.formacionPreferida = formacionPreferida;
-        this.equipoID = equipoID;
+        if (nombre != null) { 
+            this.nombre = nombre;
+        } else {
+            System.out.println("Nombre no reconocido");
+            this.nombre = "no existente";
+        }
+        if (formacionPreferida != null){
+            this.formacionPreferida = formacionPreferida;
+        } else {
+            System.out.println("Formación no reconocida");
+            this.formacionPreferida = formaciones.NOEXISTENTE;
+        }
+        entrenadoresTotales++;
     }
 
     // -------------------------getters y setters---------------------------
