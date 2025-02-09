@@ -11,17 +11,29 @@ public class equipo {
     private presidente presidenteID;
     private entrenador entrenadorID;
     private ArrayList<jugador> lista_jugadores;
+    private static int equiposTotales = 0;
 
 
 
     // -------------------------nuestro constructor-------------------------
     public equipo(String nombre, String abreviatura, presidente presidenteID, entrenador entrenadorID, ArrayList lista_jugadores) {
-        this.nombre = nombre;
-        this.abreviatura = abreviatura;
-        this.presidenteID = presidenteID;
-        this.entrenadorID = entrenadorID;
-        this.lista_jugadores = lista_jugadores;
-
+        if(nombre != null){
+            this.nombre = nombre;
+        }else{
+            System.out.println("Nombre no reconocido");
+            this.nombre = "No Reconocido";
+        }
+        if(abreviatura != null){
+            this.abreviatura = abreviatura;
+        }else{
+            System.out.println("Abreviatura no reconocido");
+            this.abreviatura = "No Reconocido";
+        }
+        equiposTotales++;        
+    }
+     // ------------------------- Uso de atributos y metodo static-----------------
+    public static int getequiposTotales() {
+        return equiposTotales;
         
     }
     

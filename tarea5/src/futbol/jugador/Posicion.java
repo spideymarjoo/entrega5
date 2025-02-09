@@ -4,5 +4,6 @@ public enum  Posicion {
     DELANTERO,
     PORTERO,
     CENTROCAMPISTA,
-    DEFENSA;
+    DEFENSA,
+    RESERVA;
 }
