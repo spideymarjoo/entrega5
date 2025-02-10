@@ -300,6 +300,5 @@ if (entrenadorID != null) {
     public static void setEquiposTotales(int equiposTotales) {
         equipo.equiposTotales = equiposTotales;
     }
-    
 
 }
