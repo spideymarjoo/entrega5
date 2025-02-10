@@ -2,6 +2,13 @@ package futbol.jugador;
 import futbol.equipo.equipo;
 import java.util.Date;
 
+/**
+ * Representa un jugador de fútbol con su nombre, fecha de nacimiento, país, posición, dorsal y estado de traspaso.
+ * 
+ * @author Entrega5
+ * @version 1.0
+ */
+
 public class jugador {
     private String nombre;
     private Date fecha_nacimiento;
@@ -11,6 +18,19 @@ public class jugador {
     private equipo equipoID;
     public Traspaso traspaso;
     private static int jugadoresTotales = 0;
+
+    /**
+     * Constructor de la clase jugador.
+     *
+     * @param nombre_jugador Nombre del jugador.
+     * @param fecha_nacimiento Fecha de nacimiento del jugador.
+     * @param pais País de origen del jugador.
+     * @param posicion Posición en la que juega el jugador.
+     * @param dorsal_jugador Número de dorsal del jugador.
+     * @param traspaso_jugador Estado de traspaso del jugador.
+     * @param equipoID Equipo al que pertenece el jugador.
+     */
+
 // --------------------------------------------Nuestro Constructor----------------------------------------
     public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador, Traspaso traspaso_jugador, equipo equipoID) {
         if(nombre_jugador != null){
@@ -53,15 +73,33 @@ public class jugador {
     }
 
     // ----------------------uso de atributos y metodo static---------------------
+    /**
+     * Obtiene el número total de jugadores.
+     * 
+     * @return Número total de jugadores creados.
+     */
+    
     public static int jugadoresTotales() {
         return jugadoresTotales;  
     }
 
     // ---------------------------getters y setters ---------------------------------
 
+    /**
+     * Obtiene el nombre del jugador.
+     * 
+     * @return Nombre del jugador.
+     */
+
     public String getNombre() {
         return nombre;
     }
+
+    /**
+     * Establece el nombre del jugador.
+     * 
+     * @param nombre Nuevo nombre del jugador.
+     */
 
     public void setNombre(String nombre) {
         if(nombre != null){
@@ -71,9 +109,21 @@ public class jugador {
         }
     }
 
+    /**
+     * Obtiene el equipo al que pertenece el jugador.
+     * 
+     * @return Equipo del jugador.
+     */
+
     public equipo getEquipoID() {
         return equipoID;
     }
+
+    /**
+     * Establece el equipo del jugador.
+     * 
+     * @param equipoID Nuevo equipo del jugador.
+     */
 
     public void setEquipoID(equipo equipoID) {
         if(equipoID !=null){
@@ -83,10 +133,21 @@ public class jugador {
         }
     }
 
+    /**
+     * Obtiene la fecha de nacimiento del jugador.
+     * 
+     * @return Fecha de nacimiento.
+     */
 
     public Date getFecha_nacimiento() {
         return fecha_nacimiento;
     }
+
+    /**
+     * Establece la fecha de nacimiento del jugador.
+     * 
+     * @param fecha_nacimiento Nueva fecha de nacimiento.
+     */
 
     public void setFecha_nacimiento(Date fecha_nacimiento) {
         if(fecha_nacimiento != null){
@@ -96,9 +157,21 @@ public class jugador {
         }
     }
 
+    /**
+     * Obtiene el país de origen del jugador.
+     * 
+     * @return País del jugador.
+     */
+
     public String getPais() {
         return pais;
     }
+
+    /**
+     * Establece el país del jugador.
+     * 
+     * @param pais Nuevo país del jugador.
+     */
 
     public void setPais(String pais) {
         if(pais != null){
@@ -108,9 +181,21 @@ public class jugador {
         }
     }
 
+    /**
+     * Obtiene la posición en la que juega el jugador.
+     * 
+     * @return Posición del jugador.
+     */
+
     public Posicion getPosicion() {
         return posicion;
     }
+    
+    /**
+     * Establece la posición del jugador.
+     * 
+     * @param posicion Nueva posición del jugador.
+     */
 
     public void setPosicion(Posicion posicion) {
         if(posicion != null){
@@ -119,9 +204,21 @@ public class jugador {
         System.out.println("Posicion invalida");
     }
 
+    /**
+     * Obtiene el número dorsal del jugador.
+     * 
+     * @return Número dorsal.
+     */
+
     public int getDorsal() {
         return numdorsal;
     }
+
+    /**
+     * Establece el número dorsal del jugador.
+     * 
+     * @param dorsal Nuevo número dorsal.
+     */
 
     public void setDorsal(int dorsal) {
         if(dorsal >= 1){
@@ -132,9 +229,21 @@ public class jugador {
         }
     }
 
+    /**
+     * Obtiene el estado de traspaso del jugador.
+     * 
+     * @return Estado de traspaso.
+     */
+
     public Traspaso getTraspaso() {
         return traspaso;
     }
+
+    /**
+     * Establece el estado de traspaso del jugador.
+     * 
+     * @param traspaso Nuevo estado de traspaso.
+     */
 
     public void setTraspaso(Traspaso traspaso) {
         if(traspaso != null){
@@ -143,6 +252,12 @@ public class jugador {
             System.out.println("Error de traspaso");
         }
     }
+
+    /**
+     * Devuelve una representación en cadena del jugador.
+     * 
+     * @return Información del jugador en formato legible.
+     */
     
     // --------------------------------------------metodo toString---------------------------------------------
     @Override
