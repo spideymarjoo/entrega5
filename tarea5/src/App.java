@@ -135,9 +135,9 @@ public class App {
         
         // ----------------------------------------- pruebas de impresiones -----------------------------------------------
         System.out.println(j1);
-        System.out.println(presi1);
-        System.out.println(e1);
-        System.out.println(equi1);
+        // System.out.println(presi1);
+        // System.out.println(e1);
+        // System.out.println(equi1);
     }
     
     
