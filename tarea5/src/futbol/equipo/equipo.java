@@ -222,7 +222,8 @@ public class equipo {
         System.out.println("Este es el nuevo estado de los jugadores " + nombre);
     }
 
-    // ------------------------------- ejercicio 5 resetear-----------------------------------------
+    // ------------------------------- ejercicio 5
+    // resetear-----------------------------------------
 
     public void traspasosEntrenador(jugador jugador, boolean acepta) {
         if (jugador.getEquipoID() != this) {
@@ -266,8 +267,7 @@ public class equipo {
         }
     }
 
-    // ----------------------------------metodo
-    // toString----------------------------------------
+    // ---------------------metodo toString---------------------------
 
     /**
      * Representación en cadena del equipo.
