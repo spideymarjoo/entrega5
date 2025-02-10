@@ -145,7 +145,7 @@ public class App {
         j9.setEquipoID(equi5);
         j10.setEquipoID(equi5);
 
-        // ------------------------- pruebas de impresiones--------------------------------
+        // -------------------- pruebas de impresiones---------------------------
 
         System.out.println(equi1);
         // System.out.println(presi1);
