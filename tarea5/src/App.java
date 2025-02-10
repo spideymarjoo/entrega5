@@ -137,7 +137,7 @@ public class App {
         System.out.println(equi1);
         // System.out.println(presi1);
         // System.out.println(e1);
-        // System.out.println(equi1);
+        
     }
     
     
