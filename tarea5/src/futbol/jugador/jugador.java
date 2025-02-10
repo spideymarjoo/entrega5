@@ -1,9 +1,11 @@
 package futbol.jugador;
+
 import futbol.equipo.equipo;
 import java.util.Date;
 
 /**
- * Representa un jugador de fútbol con su nombre, fecha de nacimiento, país, posición, dorsal y estado de traspaso.
+ * Representa un jugador de fútbol con su nombre, fecha de nacimiento, país,
+ * posición, dorsal y estado de traspaso.
  * 
  * @author Entrega5
  * @version 1.0
@@ -22,50 +24,52 @@ public class jugador {
     /**
      * Constructor de la clase jugador.
      *
-     * @param nombre_jugador Nombre del jugador.
+     * @param nombre_jugador   Nombre del jugador.
      * @param fecha_nacimiento Fecha de nacimiento del jugador.
-     * @param pais País de origen del jugador.
-     * @param posicion Posición en la que juega el jugador.
-     * @param dorsal_jugador Número de dorsal del jugador.
+     * @param pais             País de origen del jugador.
+     * @param posicion         Posición en la que juega el jugador.
+     * @param dorsal_jugador   Número de dorsal del jugador.
      * @param traspaso_jugador Estado de traspaso del jugador.
-     * @param equipoID Equipo al que pertenece el jugador.
+     * @param equipoID         Equipo al que pertenece el jugador.
      */
 
-// --------------------------------------------Nuestro Constructor----------------------------------------
-    public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador, Traspaso traspaso_jugador, equipo equipoID) {
-        if(nombre_jugador != null){
+    // --------------------------------------------Nuestro
+    // Constructor----------------------------------------
+    public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador,
+            Traspaso traspaso_jugador, equipo equipoID) {
+        if (nombre_jugador != null) {
             this.nombre = nombre_jugador;
-        }else{
+        } else {
             System.out.println("Nombre no reconocido");
             this.nombre = "No reconocido";
-        }    
-        if(fecha_nacimiento != null){
+        }
+        if (fecha_nacimiento != null) {
             this.fecha_nacimiento = fecha_nacimiento;
-        }else{
+        } else {
             System.out.println("FechaNacimiento no reconocido");
             this.fecha_nacimiento = new Date();
         }
-        if(pais != null){
+        if (pais != null) {
             this.pais = pais;
-        }else{
+        } else {
             System.out.println("Pais no reconocido");
             this.pais = "Desconocido";
         }
-        if(posicion != null){
+        if (posicion != null) {
             this.posicion = posicion;
-        }else{
+        } else {
             System.out.println("Posicion no reconocida");
             this.posicion = posicion.RESERVA;
         }
-        if(dorsal_jugador >= 1){
+        if (dorsal_jugador >= 1) {
             this.numdorsal = dorsal_jugador;
-        }else{
+        } else {
             System.out.println("Error dorsal");
             this.numdorsal = 0;
         }
-        if(traspaso_jugador != null){
+        if (traspaso_jugador != null) {
             this.traspaso = traspaso_jugador;
-        }else{
+        } else {
             System.out.println("Error traspaso");
             this.traspaso = traspaso.SIN_SOLICITAR;
         }
@@ -78,12 +82,12 @@ public class jugador {
      * 
      * @return Número total de jugadores creados.
      */
-    
+
     public static int jugadoresTotales() {
-        return jugadoresTotales;  
+        return jugadoresTotales;
     }
 
-    // ---------------------------getters y setters ---------------------------------
+    // ------------------------getters y setter -------------------
 
     /**
      * Obtiene el nombre del jugador.
@@ -102,9 +106,9 @@ public class jugador {
      */
 
     public void setNombre(String nombre) {
-        if(nombre != null){
+        if (nombre != null) {
             this.nombre = nombre;
-        }else{
+        } else {
             System.out.println("Nombre inválido");
         }
     }
@@ -126,9 +130,9 @@ public class jugador {
      */
 
     public void setEquipoID(equipo equipoID) {
-        if(equipoID !=null){
+        if (equipoID != null) {
             this.equipoID = equipoID;
-        }else{
+        } else {
             System.out.println("Equipo no reconocido");
         }
     }
@@ -150,9 +154,9 @@ public class jugador {
      */
 
     public void setFecha_nacimiento(Date fecha_nacimiento) {
-        if(fecha_nacimiento != null){
+        if (fecha_nacimiento != null) {
             this.fecha_nacimiento = fecha_nacimiento;
-        }else{
+        } else {
             System.out.println("Fecha de nacimiento inválida");
         }
     }
@@ -174,9 +178,9 @@ public class jugador {
      */
 
     public void setPais(String pais) {
-        if(pais != null){
+        if (pais != null) {
             this.pais = pais;
-        }else{
+        } else {
             System.out.println("País no reconocido");
         }
     }
@@ -190,7 +194,7 @@ public class jugador {
     public Posicion getPosicion() {
         return posicion;
     }
-    
+
     /**
      * Establece la posición del jugador.
      * 
@@ -198,10 +202,10 @@ public class jugador {
      */
 
     public void setPosicion(Posicion posicion) {
-        if(posicion != null){
+        if (posicion != null) {
             this.posicion = posicion;
-        }else
-        System.out.println("Posicion invalida");
+        } else
+            System.out.println("Posicion invalida");
     }
 
     /**
@@ -221,9 +225,9 @@ public class jugador {
      */
 
     public void setDorsal(int dorsal) {
-        if(dorsal >= 1){
+        if (dorsal >= 1) {
             this.numdorsal = dorsal;
-        }else{
+        } else {
             System.out.println("Error, ...");
             this.numdorsal = 0;
         }
@@ -246,9 +250,9 @@ public class jugador {
      */
 
     public void setTraspaso(Traspaso traspaso) {
-        if(traspaso != null){
+        if (traspaso != null) {
             this.traspaso = traspaso;
-        }else{
+        } else {
             System.out.println("Error de traspaso");
         }
     }
@@ -258,14 +262,13 @@ public class jugador {
      * 
      * @return Información del jugador en formato legible.
      */
-    
-    // --------------------------------------------metodo toString---------------------------------------------
+
+    // --------------------------------------------metodo
+    // toString---------------------------------------------
     @Override
     public String toString() {
         return "jugador [nombre=" + nombre + ", fecha_nacimiento=" + fecha_nacimiento + ", pais=" + pais + ", posicion="
                 + posicion + ", numdorsal=" + numdorsal + ", traspaso=" + traspaso + "]";
     }
-    
+
 }
-
-

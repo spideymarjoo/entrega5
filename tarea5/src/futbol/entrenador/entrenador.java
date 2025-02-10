@@ -3,7 +3,8 @@ package futbol.entrenador;
 import futbol.equipo.equipo;
 
 /**
- * Representa un entrenador de fútbol con su nombre, formación preferida y equipo asignado.
+ * Representa un entrenador de fútbol con su nombre, formación preferida y
+ * equipo asignado.
  * 
  * @author Entrega5
  * @version 1.0
@@ -18,21 +19,20 @@ public class entrenador {
     /**
      * Constructor de la clase entrenador.
      * 
-     * @param nombre Nombre del entrenador.
+     * @param nombre             Nombre del entrenador.
      * @param formacionPreferida Formación táctica preferida del entrenador.
-     * @param equipoID Equipo al que está asignado el entrenador.
+     * @param equipoID           Equipo al que está asignado el entrenador.
      */
-
 
     // -------------------------nuestro constructor-------------------------
     public entrenador(String nombre, formaciones formacionPreferida, equipo equipoID) {
-        if (nombre != null) { 
+        if (nombre != null) {
             this.nombre = nombre;
         } else {
             System.out.println("Nombre no reconocido");
             this.nombre = "no existente";
         }
-        if (formacionPreferida != null){
+        if (formacionPreferida != null) {
             this.formacionPreferida = formacionPreferida;
         } else {
             System.out.println("Formación no reconocida");
@@ -42,25 +42,25 @@ public class entrenador {
     }
 
     // ----------------------uso de atributos y metodo static---------------------
-    
+
     /**
      * Obtiene el número total de entrenadores creados.
      * 
      * @return Número total de entrenadores.
      */
-    
+
     public static int getentrenadoresTotales() {
         return entrenadoresTotales;
     }
 
     // -------------------------getters y setters---------------------------
-    
+
     /**
      * Obtiene el nombre del entrenador.
      * 
      * @return Nombre del entrenador.
      */
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -72,10 +72,10 @@ public class entrenador {
      */
 
     public void setNombre(String nombre) {
-        if(nombre != null){
+        if (nombre != null) {
             this.nombre = nombre;
-        }else{
-            System.out.println("Nombre incorrecto");        
+        } else {
+            System.out.println("Nombre incorrecto");
         }
     }
 
@@ -96,9 +96,9 @@ public class entrenador {
      */
 
     public void setFormacionPreferida(formaciones formacionPreferida) {
-        if(formacionPreferida != null){
+        if (formacionPreferida != null) {
             this.formacionPreferida = formacionPreferida;
-        }else{
+        } else {
             System.out.println("Formacion no reconocida");
         }
     }
@@ -120,28 +120,26 @@ public class entrenador {
      */
 
     public void setEquipoID(equipo equipoID) {
-        if(equipoID != null){
+        if (equipoID != null) {
             this.equipoID = equipoID;
-        }else{
+        } else {
             System.out.println("Equipo no reconocido");
         }
-        
+
     }
 
-    // --------------------------------------------metodo toString---------------------------------------------
+    // -----------------------------metodo toString-------------------------------
 
     /**
      * Representación en cadena del objeto entrenador.
      * 
      * @return Cadena con los datos del entrenador.
      */
-    
+
     @Override
     public String toString() {
         return "entrenador [nombre=" + nombre + ", formacionPreferida=" + formacionPreferida + ", equipoID=" + equipoID
                 + "]";
     }
-    
-    
 
 }

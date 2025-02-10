@@ -1,6 +1,10 @@
 package futbol.jugador;
 
-public enum  Posicion {
+/**
+ * Enumeración que representa las diferentes posiciones de un jugador de fútbol.
+ */
+
+public enum Posicion {
     DELANTERO,
     PORTERO,
     CENTROCAMPISTA,

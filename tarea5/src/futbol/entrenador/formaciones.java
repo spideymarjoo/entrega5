@@ -1,7 +1,8 @@
 package futbol.entrenador;
 
 /**
- * Enumeración que representa las diferentes formaciones que un equipo de fútbol puede utilizar.
+ * Enumeración que representa las diferentes formaciones que un equipo de fútbol
+ * puede utilizar.
  */
 
 public enum formaciones {
@@ -10,5 +11,5 @@ public enum formaciones {
     CUATRO_CINCO_UNO,
     CINCO_TRES_DOS,
     NOEXISTENTE;
-    
+
 }

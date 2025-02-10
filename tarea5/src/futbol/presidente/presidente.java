@@ -38,7 +38,7 @@ public class presidente {
     }
 
     // ----------------------uso de atributos y metodo static---------------------
-    
+
     /**
      * Obtiene el número total de presidentes creados.
      * 
@@ -46,11 +46,11 @@ public class presidente {
      */
 
     public static int getpresidentesTotales() {
-        return presidentesTotales; 
+        return presidentesTotales;
     }
 
     // -------------------------getters y setters---------------------------
-    
+
     /**
      * Obtiene el nombre del presidente.
      * 
@@ -68,12 +68,12 @@ public class presidente {
      */
 
     public void setNombre(String nombre) {
-        if(nombre != null){
+        if (nombre != null) {
             this.nombre = nombre;
-        }else{
+        } else {
             System.out.println("Nombre no reconodido");
         }
-        
+
     }
 
     /**
@@ -93,9 +93,9 @@ public class presidente {
      */
 
     public void setDni(String dni) {
-        if(dni != null){
+        if (dni != null) {
             this.dni = dni;
-        }else{
+        } else {
             System.out.println("dni no reconocido");
         }
     }
@@ -117,14 +117,14 @@ public class presidente {
      */
 
     public void setEquipoID(equipo equipoID) {
-        if(equipoID !=null){
+        if (equipoID != null) {
             this.equipoID = equipoID;
-        }else{
+        } else {
             System.out.println("Equipo no reconocido");
         }
     }
 
-    // --------------------------------------------metodo toString---------------------------------------------
+    // --------------------------metodo toString-------------------------
 
     /**
      * Devuelve una representación en cadena del objeto presidente.
@@ -136,7 +136,5 @@ public class presidente {
     public String toString() {
         return "presidente [nombre=" + nombre + ", dni=" + dni + ", equipoID=" + equipoID + "]";
     }
-    
-    
-    
+
 }

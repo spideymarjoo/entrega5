@@ -1,4 +1,5 @@
 package futbol.equipo;
+
 import futbol.entrenador.entrenador;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
@@ -6,7 +7,7 @@ import futbol.presidente.presidente;
 import java.util.ArrayList;
 
 /**
- * Representa un equipo de fútbol con su nombre, abreviatura, 
+ * Representa un equipo de fútbol con su nombre, abreviatura,
  * entrenador, presidente y lista de jugadores.
  * 
  * @author Entrega5
@@ -25,43 +26,44 @@ public class equipo {
     /**
      * Constructor de la clase equipo.
      *
-     * @param nombre Nombre del equipo.
-     * @param abreviatura Abreviatura del equipo.
-     * @param presidenteID Presidente del equipo.
-     * @param entrenadorID Entrenador del equipo.
+     * @param nombre          Nombre del equipo.
+     * @param abreviatura     Abreviatura del equipo.
+     * @param presidenteID    Presidente del equipo.
+     * @param entrenadorID    Entrenador del equipo.
      * @param lista_jugadores Lista de jugadores del equipo.
-     * @param equipoID Identificador del equipo.
+     * @param equipoID        Identificador del equipo.
      */
 
     // -------------------------nuestro constructor-------------------------
-    public equipo(String nombre, String abreviatura, presidente presidenteID, entrenador entrenadorID, ArrayList lista_jugadores, equipo equipoID) {
-        if(nombre != null){
+    public equipo(String nombre, String abreviatura, presidente presidenteID, entrenador entrenadorID,
+            ArrayList lista_jugadores, equipo equipoID) {
+        if (nombre != null) {
             this.nombre = nombre;
-        }else{
+        } else {
             System.out.println("Nombre no reconocido");
             this.nombre = "No Reconocido";
         }
-        if(abreviatura != null){
+        if (abreviatura != null) {
             this.abreviatura = abreviatura;
-        }else{
+        } else {
             System.out.println("Abreviatura no reconocido");
             this.abreviatura = "No Reconocido";
         }
-        equiposTotales++;        
+        equiposTotales++;
     }
-     // ------------------------- Uso de atributos y metodo static-----------------
-    
+    // ------------------------- Uso de atributos y metodo static-----------------
+
     /**
      * Obtiene la cantidad total de equipos creados.
      * 
      * @return Número total de equipos creados.
      */
-    
+
     public static int getequiposTotales() {
         return equiposTotales;
-        
+
     }
-    
+
     // -------------------------getters y setters---------------------------
 
     /**
@@ -73,6 +75,7 @@ public class equipo {
     public equipo getequipoID() {
         return equipoID;
     }
+
     /**
      * Establece el identificador del equipo.
      * 
@@ -80,9 +83,9 @@ public class equipo {
      */
 
     public void setequipoID(equipo equipoID) {
-        if(equipoID !=null){
+        if (equipoID != null) {
             this.equipoID = equipoID;
-        }else{
+        } else {
             System.out.println("Equipo no reconocido");
         }
     }
@@ -96,7 +99,7 @@ public class equipo {
     public String getNombre() {
         return nombre;
     }
-    
+
     /**
      * Establece el nombre del equipo.
      * 
@@ -104,9 +107,9 @@ public class equipo {
      */
 
     public void setNombre(String nombre) {
-        if(nombre != null){
+        if (nombre != null) {
             this.nombre = nombre;
-        }else{
+        } else {
             System.out.println("Nombre inválido");
         }
     }
@@ -128,9 +131,9 @@ public class equipo {
      */
 
     public void setAbreviatura(String abreviatura) {
-        if(abreviatura != null){
+        if (abreviatura != null) {
             this.abreviatura = abreviatura;
-        }else{
+        } else {
             System.out.println("Abreviatura no reconocida");
         }
     }
@@ -152,9 +155,9 @@ public class equipo {
      */
 
     public void setPresidenteID(presidente presidenteID) {
-        if(presidenteID != null){
+        if (presidenteID != null) {
             this.presidenteID = presidenteID;
-        }else{
+        } else {
             System.out.println("Presidente no reconocido");
         }
     }
@@ -176,12 +179,12 @@ public class equipo {
      */
 
     public void setEntrenadorID(entrenador entrenadorID) {
-        if(entrenadorID != null){
+        if (entrenadorID != null) {
             this.entrenadorID = entrenadorID;
-        }else{
+        } else {
             System.out.println("Entrenador no reconocido");
         }
-        
+
     }
 
     /**
@@ -203,7 +206,7 @@ public class equipo {
     public void setLista_jugadores(ArrayList<jugador> lista_jugadores) {
         if (lista_jugadores != null) {
             this.lista_jugadores = lista_jugadores;
-        }else{
+        } else {
             System.out.println("Lista de jugadores invalida");
         }
 
@@ -211,24 +214,25 @@ public class equipo {
 
     public void nuevoEstadoTraspaso() {
         for (jugador jugador : lista_jugadores) {
-            if (jugador.getTraspaso() == Traspaso.RECHAZADO_PRESIDENTE || 
-            jugador.getTraspaso() == Traspaso.RECHAZADO_ENTRENADOR) {
+            if (jugador.getTraspaso() == Traspaso.RECHAZADO_PRESIDENTE ||
+                    jugador.getTraspaso() == Traspaso.RECHAZADO_ENTRENADOR) {
                 jugador.setTraspaso(Traspaso.SIN_SOLICITAR);
             }
         }
         System.out.println("Este es el nuevo estado de los jugadores " + nombre);
     }
 
-    //---------------------------------------------------- ejercicio 5 reseteos ---------------------------------------------------------
+    // ------------------------------- ejercicio 5 resetear-----------------------------------------
 
-    public void traspasosEntrenador(jugador jugador,  boolean acepta) {
+    public void traspasosEntrenador(jugador jugador, boolean acepta) {
         if (jugador.getEquipoID() != this) {
             System.out.println("Este no es el entrenador del jugador.");
             return;
         }
         if (jugador.getTraspaso() == Traspaso.SOLICITADO) {
-            jugador.setTraspaso( acepta ? Traspaso.APROBADO_ENTRENADOR : Traspaso.RECHAZADO_ENTRENADOR);
-            System.out.println("El jugador " + jugador.getNombre() +  " será traspasado " + jugador.getTraspaso() + "por el entrenador");
+            jugador.setTraspaso(acepta ? Traspaso.APROBADO_ENTRENADOR : Traspaso.RECHAZADO_ENTRENADOR);
+            System.out.println("El jugador " + jugador.getNombre() + " será traspasado " + jugador.getTraspaso()
+                    + "por el entrenador");
         } else {
             System.out.println("El entrandor no pudo decidir el traspaso, falta solicitar");
         }
@@ -241,14 +245,15 @@ public class equipo {
         }
         if (jugador.getTraspaso() == Traspaso.APROBADO_ENTRENADOR) {
             jugador.setTraspaso(acepta ? Traspaso.APROBADO_PRESIDENTE : Traspaso.RECHAZADO_PRESIDENTE);
-            System.out.println("El jugador " + jugador.getNombre() +  " será traspasado " + jugador.getTraspaso() + " por el presidente");
+            System.out.println("El jugador " + jugador.getNombre() + " será traspasado " + jugador.getTraspaso()
+                    + " por el presidente");
         } else {
             System.out.println("No se pudo decidir el traaspaso de " + jugador.getNombre());
         }
     }
 
-    public void nuevoJugador (jugador jugador) {
-        if (jugador != null && !lista_jugadores.contains(jugador)){
+    public void nuevoJugador(jugador jugador) {
+        if (jugador != null && !lista_jugadores.contains(jugador)) {
             lista_jugadores.add(jugador);
             jugador.setEquipoID(this);
         }
@@ -261,7 +266,8 @@ public class equipo {
         }
     }
 
-    // --------------------------------------------metodo toString----------------------------------------------
+    // ----------------------------------metodo
+    // toString----------------------------------------
 
     /**
      * Representación en cadena del equipo.
@@ -272,31 +278,34 @@ public class equipo {
     @Override
     public String toString() {
         String Gaa;
-if (presidenteID != null) {
-    Gaa = presidenteID.getNombre();
-} else {
-    Gaa = "Ningún presidente";
-}
-        
+        if (presidenteID != null) {
+            Gaa = presidenteID.getNombre();
+        } else {
+            Gaa = "Ningún presidente";
+        }
 
-String Mee;
-if (entrenadorID != null) {
-    Mee = entrenadorID.getNombre();
-} else {
-    Mee = "Ningún entrenador";
-}
+        String Mee;
+        if (entrenadorID != null) {
+            Mee = entrenadorID.getNombre();
+        } else {
+            Mee = "Ningún entrenador";
+        }
         return "equipo [nombre=" + nombre + ", abreviatura=" + abreviatura + ", presidenteID=" + Gaa
                 + ", entrenadorID=" + Mee + ", lista_jugadores=" + lista_jugadores + "]";
     }
+
     public equipo getEquipoID() {
         return equipoID;
     }
+
     public void setEquipoID(equipo equipoID) {
         equipoID = equipoID;
     }
+
     public static int getEquiposTotales() {
         return equiposTotales;
     }
+
     public static void setEquiposTotales(int equiposTotales) {
         equipo.equiposTotales = equiposTotales;
     }
