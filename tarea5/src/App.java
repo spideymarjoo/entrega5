@@ -145,7 +145,23 @@ public class App {
         j10.setEquipoID(equi5);
 
         // -------------------- pruebas de impresiones---------------------------
-         System.out.println(j1);
+        System.out.println(j1);
+        System.out.println("El jugador solicita cambiarse de equipo");
+        j1.setTraspaso(Traspaso.SOLICITADO);
+        System.out.println(j1);
+        System.out.println("El entrenador debe aceptar al jugador");
+        equi1.traspasosEntrenador(j1, true);
+        System.out.println("Proceso de aceptacion por parte del presidente castillo");
+        equi1.traspasosPresidente(j1, true);
+        System.out.println(j1);
+        //System.out.println(presi1);
+        //System.out.println(equi1);
+        //System.out.println(e1);
+        //System.out.println(equi1);
+        //System.out.println(presi1);
+        // System.out.println(e1);
+        //--------------------------------Pruebas de receteo-----------------------------------
+        System.out.println(j1);
         System.out.println("El jugador solicita cambiarse de equipo");
         j1.setTraspaso(Traspaso.SOLICITADO);
         System.out.println(j1);
@@ -153,16 +169,35 @@ public class App {
         System.out.println("El entrenador debe aceptar al jugador");
         equi1.traspasosEntrenador(j1, true);
 
-        System.out.println("Proceso de aceptacion por parte del presidente castillo");
+        System.out.println("Proceso de aceptacion por parte del presidente");
         equi1.traspasosPresidente(j1, true);
-        //System.out.println(j1);
-        //System.out.println(presi1);
-        //System.out.println(equi1);
-        //System.out.println(e1);
+        System.out.println(j1);
+        System.out.println("El jugador solicita cambiarse de equipo");
+        j1.setTraspaso(Traspaso.SOLICITADO);
+        System.out.println(j1);
 
-        //System.out.println(equi1);
-        //System.out.println(presi1);
-        // System.out.println(e1);
+        System.out.println("El entrenador debe aceptar al jugador");
+        equi1.traspasosEntrenador(j1, true);
+
+        System.out.println("Proceso de aceptacion por parte del presidente");
+        equi1.traspasosPresidente(j1, false);
+        System.out.println(j1);
+
+        equi1.nuevoEstadoTraspaso();
+        System.out.println(j1);
+
+        //--------------------------------------Prueba de nuevo jugador y borrar jugador------------------------------------------
+        System.out.println("Añadiendo nuevo jugador al equipo 3 y borrando del equipo 1");
+        equi3.nuevoJugador(j1);
+        equi1.borrarJugador(j1);
+
+        //-----------------------Prueba equipos totales----------------
+        System.out.println("Numero de equipos totales " + equipo.getEquiposTotales());
+
+        System.out.println("Numero de jugadores totales " + jugador.getjugadoresTotales());
+
+        System.out.println("Numero de entrenadores totales " + entrenador.getentrenadoresTotales());
+
     }
 
 }
