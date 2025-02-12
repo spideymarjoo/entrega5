@@ -83,7 +83,7 @@ public class jugador {
      * @return Número total de jugadores creados.
      */
 
-    public static int jugadoresTotales() {
+    public static int getjugadoresTotales() {
         return jugadoresTotales;
     }
 
