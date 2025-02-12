@@ -15,16 +15,15 @@ import java.util.Date;
  * presidentes y equipos de fútbol, asignándolos y mostrando información
  * relevante en la consola.
  */
-
 public class App {
 
     /**
      * Método que genera una fecha de nacimiento basada en el año, mes y día
      * proporcionados.
-     * 
+     *
      * @param anio Año de nacimiento.
-     * @param mes  Mes de nacimiento (1-12).
-     * @param dia  Día de nacimiento.
+     * @param mes Mes de nacimiento (1-12).
+     * @param dia Día de nacimiento.
      * @return Objeto Date que representa la fecha de nacimiento.
      */
     public static Date fechanacimiento(int anio, int mes, int dia) {
@@ -36,9 +35,9 @@ public class App {
     /**
      * Método principal donde se crean instancias de jugadores, entrenadores,
      * presidentes y equipos, y se establecen sus relaciones.
-     * 
+     *
      * @param args Argumentos de la línea de comandos (no utilizados en este
-     *             programa).
+     * programa).
      * @throws Exception Manejo de posibles excepciones.
      */
     public static void main(String[] args) throws Exception {
@@ -146,9 +145,23 @@ public class App {
         j10.setEquipoID(equi5);
 
         // -------------------- pruebas de impresiones---------------------------
+         System.out.println(j1);
+        System.out.println("El jugador solicita cambiarse de equipo");
+        j1.setTraspaso(Traspaso.SOLICITADO);
+        System.out.println(j1);
 
-        System.out.println(equi1);
-        // System.out.println(presi1);
+        System.out.println("El entrenador debe aceptar al jugador");
+        equi1.traspasosEntrenador(j1, true);
+
+        System.out.println("Proceso de aceptacion por parte del presidente castillo");
+        equi1.traspasosPresidente(j1, true);
+        //System.out.println(j1);
+        //System.out.println(presi1);
+        //System.out.println(equi1);
+        //System.out.println(e1);
+
+        //System.out.println(equi1);
+        //System.out.println(presi1);
         // System.out.println(e1);
     }
 
