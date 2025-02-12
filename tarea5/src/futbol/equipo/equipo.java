@@ -277,21 +277,21 @@ public class equipo {
 
     @Override
     public String toString() {
-        String Gaa;
+        String comprobacionPresi;
         if (presidenteID != null) {
-            Gaa = presidenteID.getNombre();
+            comprobacionPresi = presidenteID.getNombre();
         } else {
-            Gaa = "Ningún presidente";
+            comprobacionPresi = "Ningún presidente";
         }
 
-        String Mee;
+        String comprobacionEntrenador;
         if (entrenadorID != null) {
-            Mee = entrenadorID.getNombre();
+            comprobacionEntrenador = entrenadorID.getNombre();
         } else {
-            Mee = "Ningún entrenador";
+            comprobacionEntrenador = "Ningún entrenador";
         }
-        return "equipo [nombre=" + nombre + ", abreviatura=" + abreviatura + ", presidenteID=" + Gaa
-                + ", entrenadorID=" + Mee + ", lista_jugadores=" + lista_jugadores + "]";
+        return "equipo [nombre=" + nombre + ", abreviatura=" + abreviatura + ", presidenteID=" + comprobacionPresi
+                + ", entrenadorID=" + comprobacionEntrenador + ", lista_jugadores=" + lista_jugadores + "]";
     }
 
     public equipo getEquipoID() {
