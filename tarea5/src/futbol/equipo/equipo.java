@@ -279,14 +279,14 @@ public class equipo {
     public String toString() {
         String comprobacionPresi;
         if (presidenteID != null) {
-            comprobacionPresi = presidenteID.getNombre();
+            comprobacionPresi = presidenteID.getnombre();
         } else {
             comprobacionPresi = "Ningún presidente";
         }
 
         String comprobacionEntrenador;
         if (entrenadorID != null) {
-            comprobacionEntrenador = entrenadorID.getNombre();
+            comprobacionEntrenador = entrenadorID.getnombre();
         } else {
             comprobacionEntrenador = "Ningún entrenador";
         }

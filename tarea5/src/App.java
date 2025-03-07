@@ -127,11 +127,11 @@ public class App {
                 equi5.setEntrenadorID(e5);
                 equi5.setLista_jugadores(jugadoresPSG);
 
-                presi1.setEquipoID(equi1);
-                presi2.setEquipoID(equi2);
-                presi3.setEquipoID(equi3);
-                presi4.setEquipoID(equi4);
-                presi5.setEquipoID(equi5);
+                presi1.setequipoID(equi1);
+                presi2.setequipoID(equi2);
+                presi3.setequipoID(equi3);
+                presi4.setequipoID(equi4);
+                presi5.setequipoID(equi5);
 
                 e1.setEquipoID(equi1);
                 e2.setEquipoID(equi2);

@@ -1,14 +1,18 @@
 package futbol.presidente;
 
+import java.util.Date;
+
+import futbol.trabajador;
 import futbol.equipo.equipo;
 
 /**
  * Clase que representa a un presidente de un equipo de fútbol.
  */
 
-public class presidente {
+public class presidente extends trabajador {
     private String nombre;
     private String dni;
+    private Date fecha_nacimiento;
     private equipo equipoID;
     private static int presidentesTotales = 0;
 
@@ -37,6 +41,12 @@ public class presidente {
         presidentesTotales++;
     }
 
+    // ------------------ metodo mostrar informacion--------------------
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + getnombre());
+    }
+
     // ----------------------uso de atributos y metodo static---------------------
 
     /**
@@ -57,7 +67,7 @@ public class presidente {
      * @return Nombre del presidente.
      */
 
-    public String getNombre() {
+    public String getnombre() {
         return nombre;
     }
 
@@ -67,7 +77,7 @@ public class presidente {
      * @param nombre Nombre del presidente.
      */
 
-    public void setNombre(String nombre) {
+    public void setnombre(String nombre) {
         if (nombre != null) {
             this.nombre = nombre;
         } else {
@@ -82,7 +92,7 @@ public class presidente {
      * @return DNI del presidente.
      */
 
-    public String getDni() {
+    public String getdni() {
         return dni;
     }
 
@@ -92,7 +102,7 @@ public class presidente {
      * @param dni DNI del presidente.
      */
 
-    public void setDni(String dni) {
+    public void setdni(String dni) {
         if (dni != null) {
             this.dni = dni;
         } else {
@@ -106,7 +116,7 @@ public class presidente {
      * @return Equipo del presidente.
      */
 
-    public equipo getEquipoID() {
+    public equipo getequipoID() {
         return equipoID;
     }
 
@@ -116,7 +126,7 @@ public class presidente {
      * @param equipoID Equipo del presidente.
      */
 
-    public void setEquipoID(equipo equipoID) {
+    public void setequipoID(equipo equipoID) {
         if (equipoID != null) {
             this.equipoID = equipoID;
         } else {

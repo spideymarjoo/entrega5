@@ -3,46 +3,48 @@ package futbol;
 import java.util.Date;
 
 public abstract class trabajador {
-    private String nombreTra;
-    private Date fechaNacimientoTra;
-    private String paisTra;
+    private String nombre;
+    private Date fecha_nacimiento;
+    private String pais;
 
     // -------------------------nuestro constructor--------------------------
-    public trabajador(String nombreTra, Date fechaNacimientoTra, String paisTra) {
-        this.nombreTra = nombreTra;
-        this.fechaNacimientoTra = fechaNacimientoTra;
-        this.paisTra = paisTra;
+    public trabajador(String nombre, Date fecha_nacimiento, String pais) {
+        this.nombre = nombre;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.pais = pais;
     }
 
-    // ------------------------------getters------------------------------
-    public String getNombreTra() {
-        return nombreTra;
+    public trabajador() {
     }
 
-    public Date getFechaNacimientoTra() {
-        return fechaNacimientoTra;
+    // ---------------------getters y setters------------------------------
+    public String getnombre() {
+        return nombre;
     }
 
-    public String getPais() {
-        return paisTra;
+    public void setnombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    // -------------------------------setters------------------------------
-    public void setNombreTra(String nombreTra) {
-        this.nombreTra = nombreTra;
+    public Date getfecha_nacimiento() {
+        return fecha_nacimiento;
     }
 
-    public void setFechaNacimientoTra(Date fechaNacimientoTra) {
-        this.fechaNacimientoTra = fechaNacimientoTra;
+    public void setFecha_nacimiento(Date fecha_nacimiento) {
+        this.fecha_nacimiento = fecha_nacimiento;
     }
 
-    public void setPaisTra(String paisTra) {
-        this.paisTra = paisTra;
+    public String getpais() {
+        return pais;
+    }
+
+    public void setpais(String pais) {
+        this.pais = pais;
     }
 
     // ------------------método mismaNacionalidad-------------------------
     public boolean mismaNacionalidad(trabajador otro) {
-        return this.paisTra.equalsIgnoreCase(otro.getPais());
+        return this.pais.equalsIgnoreCase(otro.getpais());
     }
 
     // ---------------método abstracto mostrarInfo------------------------
