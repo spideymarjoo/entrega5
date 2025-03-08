@@ -25,7 +25,7 @@ public class App {
          * @param dia  Día de nacimiento.
          * @return Objeto Date que representa la fecha de nacimiento.
          */
-        public static Date fechanacimiento(int anio, int mes, int dia) {
+        public static Date fecha_nacimiento(int anio, int mes, int dia) {
                 Calendar cal = Calendar.getInstance();
                 cal.set(anio, mes - 1, dia);
                 return cal.getTime();

@@ -1,12 +1,13 @@
 package futbol.presidente;
 
 import futbol.equipo.equipo;
+import futbol.trabajador;
 
 /**
  * Clase que representa a un presidente de un equipo de fútbol.
  */
 
-public class presidente {
+public class presidente extends trabajador {
     private String nombre;
     private String dni;
     private equipo equipoID;

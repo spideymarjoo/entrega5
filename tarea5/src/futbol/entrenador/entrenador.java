@@ -1,6 +1,7 @@
 package futbol.entrenador;
 
 import futbol.equipo.equipo;
+import futbol.trabajador;
 
 /**
  * Representa un entrenador de fútbol con su nombre, formación preferida y
@@ -10,7 +11,7 @@ import futbol.equipo.equipo;
  * @version 1.0
  */
 
-public class entrenador {
+public class entrenador extends trabajador {
     private String nombre;
     private formaciones formacionPreferida;
     private equipo equipoID;

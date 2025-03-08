@@ -1,6 +1,7 @@
 package futbol.jugador;
 
 import futbol.equipo.equipo;
+import futbol.trabajador;
 import java.util.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
  * @version 1.0
  */
 
-public class jugador {
+public class jugador extends trabajador {
     private String nombre;
     private Date fecha_nacimiento;
     private String pais;
