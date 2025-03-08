@@ -6,12 +6,17 @@ public abstract class trabajador {
     private String nombreTra;
     private Date fechaNacimientoTra;
     private String paisTra;
+    public static int trabajadoresTotales = 0;
 
     // -------------------------nuestro constructor--------------------------
     public trabajador(String nombreTra, Date fechaNacimientoTra, String paisTra) {
         this.nombreTra = nombreTra;
         this.fechaNacimientoTra = fechaNacimientoTra;
         this.paisTra = paisTra;
+        trabajadoresTotales++;
+    }
+    public static int gettrabajadoresTotales() {
+        return trabajadoresTotales;
     }
 
     // ------------------------------getters------------------------------

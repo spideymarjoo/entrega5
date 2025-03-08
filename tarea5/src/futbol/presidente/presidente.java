@@ -1,12 +1,14 @@
 package futbol.presidente;
 
+import futbol.trabajador;
 import futbol.equipo.equipo;
+import java.util.Date;
 
 /**
  * Clase que representa a un presidente de un equipo de fútbol.
  */
 
-public class presidente {
+public class presidente extends trabajador {
     private String nombre;
     private String dni;
     private equipo equipoID;
@@ -21,7 +23,8 @@ public class presidente {
      */
 
     // -------------------------nuestro constructor-------------------------
-    public presidente(String nombre, String dni, equipo equipoID) {
+    public presidente(String nombre, Date fechaNacimiento, String paisOrigen, String dni, equipo equipoID) {
+        super(nombre, fechaNacimiento, paisOrigen);
         if (nombre != null) {
             this.nombre = nombre;
         } else {
@@ -35,6 +38,10 @@ public class presidente {
             this.dni = "No existente";
         }
         presidentesTotales++;
+    }
+
+    public void mostrarInfo(){
+        System.out.println(nombre + "tipo presidente");
     }
 
     // ----------------------uso de atributos y metodo static---------------------
@@ -123,7 +130,6 @@ public class presidente {
             System.out.println("Equipo no reconocido");
         }
     }
-
     // --------------------------metodo toString-------------------------
 
     /**
@@ -131,10 +137,10 @@ public class presidente {
      * 
      * @return Representación en cadena del presidente.
      */
-
     @Override
     public String toString() {
-        return "presidente [nombre=" + nombre + ", dni=" + dni + ", equipoID=" + equipoID + "]";
+        String equipo = (equipoID != null) ? equipoID.getNombre() : "No existe";
+        return "presidente [dni=" + dni + ", equipoID=" + equipo + ", getNombreTra()=" + getNombreTra()
+                + ", getFechaNacimientoTra()=" + getFechaNacimientoTra() + ", getPais()=" + getPais() + "]";
     }
-
 }

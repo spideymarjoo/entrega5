@@ -1,5 +1,6 @@
 package futbol.jugador;
 
+import futbol.trabajador;
 import futbol.equipo.equipo;
 import java.util.Date;
 
@@ -11,7 +12,7 @@ import java.util.Date;
  * @version 1.0
  */
 
-public class jugador {
+public class jugador extends trabajador {
     private String nombre;
     private Date fecha_nacimiento;
     private String pais;
@@ -37,6 +38,7 @@ public class jugador {
     // Constructor----------------------------------------
     public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador,
             Traspaso traspaso_jugador, equipo equipoID) {
+        super(nombre_jugador, fecha_nacimiento, pais);
         if (nombre_jugador != null) {
             this.nombre = nombre_jugador;
         } else {
@@ -74,6 +76,9 @@ public class jugador {
             this.traspaso = traspaso.SIN_SOLICITAR;
         }
         jugadoresTotales++;
+    }
+    public void mostrarInfo(){
+        System.out.println(nombre + "tipo jugador");
     }
 
     // ----------------------uso de atributos y metodo static---------------------
@@ -262,13 +267,10 @@ public class jugador {
      * 
      * @return Información del jugador en formato legible.
      */
-
-    // --------------------------------------------metodo
-    // toString---------------------------------------------
     @Override
     public String toString() {
-        return "jugador [nombre=" + nombre + ", fecha_nacimiento=" + fecha_nacimiento + ", pais=" + pais + ", posicion="
-                + posicion + ", numdorsal=" + numdorsal + ", traspaso=" + traspaso + "]";
+        return "jugador [posicion=" + posicion + ", numdorsal=" + numdorsal + ", equipoID=" + equipoID.getNombre() + ", traspaso="
+                + traspaso + ", getNombreTra()=" + getNombreTra() + ", getFechaNacimientoTra()="
+                + getFechaNacimientoTra() + ", getPais()=" + getPais() + "]";
     }
-
 }

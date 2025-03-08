@@ -1,6 +1,8 @@
 package futbol.entrenador;
 
+import futbol.trabajador;
 import futbol.equipo.equipo;
+import java.util.Date;
 
 /**
  * Representa un entrenador de fútbol con su nombre, formación preferida y
@@ -10,7 +12,7 @@ import futbol.equipo.equipo;
  * @version 1.0
  */
 
-public class entrenador {
+public class entrenador extends trabajador {
     private String nombre;
     private formaciones formacionPreferida;
     private equipo equipoID;
@@ -25,7 +27,9 @@ public class entrenador {
      */
 
     // -------------------------nuestro constructor-------------------------
-    public entrenador(String nombre, formaciones formacionPreferida, equipo equipoID) {
+    public entrenador(String nombre, Date fechaNacimiento, String paisOrigen, formaciones formacionPreferida,
+            equipo equipoID) {
+        super(nombre, fechaNacimiento, paisOrigen);
         if (nombre != null) {
             this.nombre = nombre;
         } else {
@@ -39,6 +43,9 @@ public class entrenador {
             this.formacionPreferida = formaciones.NOEXISTENTE;
         }
         entrenadoresTotales++;
+    }
+    public void mostrarInfo(){
+        System.out.println(nombre + "tipo entrenador");
     }
 
     // ----------------------uso de atributos y metodo static---------------------
@@ -127,19 +134,23 @@ public class entrenador {
         }
 
     }
+    
 
     // -----------------------------metodo toString-------------------------------
 
+    
     /**
      * Representación en cadena del objeto entrenador.
      * 
      * @return Cadena con los datos del entrenador.
      */
 
-    @Override
-    public String toString() {
-        return "entrenador [nombre=" + nombre + ", formacionPreferida=" + formacionPreferida + ", equipoID=" + equipoID
-                + "]";
-    }
+     @Override
+     public String toString() {
+        String equipo = (equipoID != null) ? equipoID.getNombre() : "No existe";
+         return "entrenador [formacionPreferida=" + formacionPreferida + ", equipoID=" + equipo + ", getNombreTra()="
+                 + getNombreTra() + ", getFechaNacimientoTra()=" + getFechaNacimientoTra() + ", getPais()=" + getPais()
+                 + "]";
+     }
 
 }
