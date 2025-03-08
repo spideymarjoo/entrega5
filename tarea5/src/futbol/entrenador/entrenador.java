@@ -1,5 +1,8 @@
 package futbol.entrenador;
 
+import java.util.Date;
+
+import futbol.trabajador;
 import futbol.equipo.equipo;
 
 /**
@@ -10,7 +13,7 @@ import futbol.equipo.equipo;
  * @version 1.0
  */
 
-public class entrenador {
+public class entrenador extends trabajador {
     private String nombre;
     private formaciones formacionPreferida;
     private equipo equipoID;
@@ -39,6 +42,14 @@ public class entrenador {
             this.formacionPreferida = formaciones.NOEXISTENTE;
         }
         entrenadoresTotales++;
+    }
+
+    // ------------------ metodo mostrar informacion--------------------
+
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("País: " + getpais());
     }
 
     // ----------------------uso de atributos y metodo static---------------------
