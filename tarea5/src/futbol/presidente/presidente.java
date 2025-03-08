@@ -1,7 +1,7 @@
 package futbol.presidente;
 
-import futbol.trabajador;
 import futbol.equipo.equipo;
+import futbol.trabajador;
 import java.util.Date;
 
 /**
@@ -143,4 +143,5 @@ public class presidente extends trabajador {
         return "presidente [dni=" + dni + ", equipoID=" + equipo + ", getNombreTra()=" + getNombreTra()
                 + ", getFechaNacimientoTra()=" + getFechaNacimientoTra() + ", getPais()=" + getPais() + "]";
     }
+    
 }

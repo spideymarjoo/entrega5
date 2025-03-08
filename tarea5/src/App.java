@@ -1,5 +1,4 @@
 
-import futbol.trabajador;
 import futbol.entrenador.entrenador;
 import futbol.entrenador.formaciones;
 import futbol.equipo.equipo;
@@ -7,6 +6,7 @@ import futbol.jugador.Posicion;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
 import futbol.presidente.presidente;
+import futbol.trabajador;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -176,8 +176,14 @@ public class App {
                 System.out.println("El entrenador debe aceptar al jugador");
                 equi1.traspasosEntrenador(j1, true);
 
+                //e1.aprobarTraspaso(j1,equi1);
+                //e1.rechazarTraspaso(j2,equi1);
+
                 System.out.println("Proceso de aceptacion por parte del presidente");
                 equi1.traspasosPresidente(j1, true);
+
+                //presi1.aprobarTraspaso(j1,equi1);
+
                 System.out.println(j1);
                 System.out.println("El jugador solicita cambiarse de equipo");
                 j1.setTraspaso(Traspaso.SOLICITADO);
@@ -186,8 +192,12 @@ public class App {
                 System.out.println("El entrenador debe aceptar al jugador");
                 equi1.traspasosEntrenador(j1, true);
 
+                //e1.aprobarTraspaso(j1,equi1);
+
                 System.out.println("Proceso de aceptacion por parte del presidente");
                 equi1.traspasosPresidente(j1, false);
+
+                //presi1.rechazarTraspaso(j1,equi1);
                 System.out.println(j1);
 
                 equi1.nuevoEstadoTraspaso();

@@ -1,7 +1,7 @@
 package futbol.entrenador;
 
-import futbol.trabajador;
 import futbol.equipo.equipo;
+import futbol.trabajador;
 import java.util.Date;
 
 /**
@@ -47,6 +47,8 @@ public class entrenador extends trabajador {
     public void mostrarInfo(){
         System.out.println(nombre + "tipo entrenador");
     }
+
+    
 
     // ----------------------uso de atributos y metodo static---------------------
 
