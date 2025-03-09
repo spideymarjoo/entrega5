@@ -3,18 +3,19 @@ package futbol;
 import java.util.Date;
 
 public abstract class trabajador {
-    private String nombreTra;
-    private Date fechaNacimientoTra;
-    private String paisTra;
+    private String nombre;
+    private Date fecha_nacimiento;
+    private String pais;
     public static int trabajadoresTotales = 0;
 
     // -------------------------nuestro constructor--------------------------
-    public trabajador(String nombreTra, Date fechaNacimientoTra, String paisTra) {
-        this.nombreTra = nombreTra;
-        this.fechaNacimientoTra = fechaNacimientoTra;
-        this.paisTra = paisTra;
+    public trabajador(String nombre, Date fecha_nacimiento, String pais) {
+        this.nombre = nombre;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.pais = pais;
         trabajadoresTotales++;
     }
+
     public static int gettrabajadoresTotales() {
         return trabajadoresTotales;
     }

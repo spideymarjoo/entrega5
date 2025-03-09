@@ -1,13 +1,10 @@
 package futbol.presidente;
 
 import java.util.Date;
-
 import futbol.trabajador;
 import futbol.equipo.equipo;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
-import futbol.trabajador;
-import java.util.Date;
 
 /**
  * Clase que representa a un presidente de un equipo de fútbol.
@@ -29,8 +26,8 @@ public class presidente extends trabajador {
      */
 
     // -------------------------nuestro constructor-------------------------
-    public presidente(String nombre, Date fechaNacimiento, String paisOrigen, String dni, equipo equipoID) {
-        super(nombre, fechaNacimiento, paisOrigen);
+    public presidente(String nombre, Date fecha_nacimiento, String paisOrigen, String dni, equipo equipoID) {
+        super(nombre, fecha_nacimiento, paisOrigen);
         if (nombre != null) {
             this.nombre = nombre;
         } else {
@@ -47,11 +44,9 @@ public class presidente extends trabajador {
     }
 
     @Override
-    public void mostrarInfo(){
+    public void mostrarInfo() {
         System.out.println(nombre + "tipo presidente");
     }
-    // ------------------ metodo mostrar informacion--------------------
-
     // ----------------------uso de atributos y metodo static---------------------
 
     /**
@@ -148,25 +143,25 @@ public class presidente extends trabajador {
     @Override
     public String toString() {
         String equipo = (equipoID != null) ? equipoID.getNombre() : "No existe";
-        return "presidente [dni=" + dni + ", equipoID=" + equipo + ", getNombreTra()=" + getNombreTra()
-                + ", getFechaNacimientoTra()=" + getFechaNacimientoTra() + ", getPais()=" + getPais() + "]";
+        return "presidente [dni=" + dni + ", equipoID=" + equipo + ", getNombreTra()=" + getnombre()
+                + ", getFechaNacimientoTra()=" + getfecha_nacimiento() + ", getPais()=" + getpais() + "]";
     }
 
-    public void aprobarTraspaso(jugador jugador, equipo equipo){
-        if(jugador.getEquipoID() != equipo){
+    public void aprobarTraspaso(jugador jugador, equipo equipo) {
+        if (jugador.getEquipoID() != equipo) {
             System.out.println("No se logro aceptar el traspaso.");
             return;
         }
-        if(jugador.getTraspaso() == Traspaso.SOLICITADO){
+        if (jugador.getTraspaso() == Traspaso.SOLICITADO) {
             jugador.setTraspaso(Traspaso.APROBADO_ENTRENADOR);
             System.out.println("Se logro el traspaso del jugador" + jugador.getNombre());
-        }else{
+        } else {
             System.out.println("No se logro concretar el traspaso del jugador" + jugador.getNombre());
         }
     }
 
-    public void rechazarTraspaso(jugador jugador, equipo equipo){
-        if(jugador.getEquipoID() != equipo){
+    public void rechazarTraspaso(jugador jugador, equipo equipo) {
+        if (jugador.getEquipoID() != equipo) {
             System.out.println("No se logro rechazar el traspaso");
             return;
         }

@@ -1,13 +1,10 @@
 package futbol.entrenador;
 
 import java.util.Date;
-
 import futbol.trabajador;
 import futbol.equipo.equipo;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
-import futbol.trabajador;
-import java.util.Date;
 
 /**
  * Representa un entrenador de fútbol con su nombre, formación preferida y
@@ -49,40 +46,31 @@ public class entrenador extends trabajador {
         }
         entrenadoresTotales++;
     }
-    public void mostrarInfo(){
+
+    public void mostrarInfo() {
         System.out.println(nombre + "tipo entrenador");
     }
-    
-    public void aprobarTraspaso(jugador jugador, equipo equipo){
-        if(jugador.getEquipoID() != equipo){
+
+    public void aprobarTraspaso(jugador jugador, equipo equipo) {
+        if (jugador.getEquipoID() != equipo) {
             System.out.println("No se logro aceptar el traspaso.");
             return;
         }
-        if(jugador.getTraspaso() == Traspaso.SOLICITADO){
+        if (jugador.getTraspaso() == Traspaso.SOLICITADO) {
             jugador.setTraspaso(Traspaso.APROBADO_ENTRENADOR);
             System.out.println("Se logro el traspaso del jugador" + jugador.getNombre());
-        }else{
+        } else {
             System.out.println("No se logro concretar el traspaso del jugador" + jugador.getNombre());
         }
     }
 
-    public void rechazarTraspaso(jugador jugador, equipo equipo){
-        if(jugador.getEquipoID() != equipo){
+    public void rechazarTraspaso(jugador jugador, equipo equipo) {
+        if (jugador.getEquipoID() != equipo) {
             System.out.println("No se logro rechazar el traspaso");
             return;
         }
         jugador.setTraspaso(Traspaso.RECHAZADO_ENTRENADOR);
         System.out.println(jugador.getNombre() + "rechazado por el entranadoor");
-    }
-
-    
-
-    // ------------------ metodo mostrar informacion--------------------
-
-    @Override
-    public void mostrarInfo() {
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("País: " + getpais());
     }
 
     // ----------------------uso de atributos y metodo static---------------------
@@ -171,23 +159,21 @@ public class entrenador extends trabajador {
         }
 
     }
-    
 
     // -----------------------------metodo toString-------------------------------
 
-    
     /**
      * Representación en cadena del objeto entrenador.
      * 
      * @return Cadena con los datos del entrenador.
      */
 
-     @Override
-     public String toString() {
+    @Override
+    public String toString() {
         String equipo = (equipoID != null) ? equipoID.getNombre() : "No existe";
-         return "entrenador [formacionPreferida=" + formacionPreferida + ", equipoID=" + equipo + ", getNombreTra()="
-                 + getNombreTra() + ", getFechaNacimientoTra()=" + getFechaNacimientoTra() + ", getPais()=" + getPais()
-                 + "]";
-     }
+        return "entrenador [formacionPreferida=" + formacionPreferida + ", equipoID=" + equipo + ", getNombreTra()="
+                + getnombre() + ", getFechaNacimientoTra()=" + getfecha_nacimiento() + ", getPais()=" + getpais()
+                + "]";
+    }
 
 }

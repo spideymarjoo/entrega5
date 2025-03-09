@@ -36,7 +36,7 @@ public class jugador extends trabajador {
      */
     public jugador(String nombre, Date fecha_nacimiento, String pais, Posicion posicion, int numDorsal,
             Traspaso traspaso_jugador, equipo equipoID) {
-        super(nombre_jugador, fecha_nacimiento, pais);
+        super(nombre, fecha_nacimiento, pais);
         if (nombre != null) {
             this.nombre = nombre;
         } else {
@@ -75,15 +75,9 @@ public class jugador extends trabajador {
         }
         jugadoresTotales++;
     }
-    public void mostrarInfo(){
-        System.out.println(nombre + "tipo jugador");
-    }
 
-    // ------------------ metodo mostrar informacion--------------------
-    @Override
     public void mostrarInfo() {
-        System.out.println("Información del Jugador:");
-        System.out.println("Nombre: " + nombre);
+        System.out.println(nombre + "tipo jugador");
     }
 
     // ----------------------uso de atributos y metodo static---------------------
@@ -274,8 +268,9 @@ public class jugador extends trabajador {
      */
     @Override
     public String toString() {
-        return "jugador [posicion=" + posicion + ", numdorsal=" + numdorsal + ", equipoID=" + equipoID.getNombre() + ", traspaso="
-                + traspaso + ", getNombreTra()=" + getNombreTra() + ", getFechaNacimientoTra()="
-                + getFechaNacimientoTra() + ", getPais()=" + getPais() + "]";
+        return "jugador [posicion=" + posicion + ", numdorsal=" + numDorsal + ", equipoID=" + equipoID.getNombre()
+                + ", traspaso="
+                + traspaso_jugador + ", getNombreTra()=" + getnombre() + ", getFechaNacimientoTra()="
+                + getfecha_nacimiento() + ", getPais()=" + getPais() + "]";
     }
 }
