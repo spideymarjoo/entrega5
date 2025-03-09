@@ -1,6 +1,8 @@
 package futbol.presidente;
 
 import futbol.equipo.equipo;
+import futbol.jugador.Traspaso;
+import futbol.jugador.jugador;
 import futbol.trabajador;
 import java.util.Date;
 
@@ -143,5 +145,27 @@ public class presidente extends trabajador {
         return "presidente [dni=" + dni + ", equipoID=" + equipo + ", getNombreTra()=" + getNombreTra()
                 + ", getFechaNacimientoTra()=" + getFechaNacimientoTra() + ", getPais()=" + getPais() + "]";
     }
-    
+
+    public void aprobarTraspaso(jugador jugador, equipo equipo){
+        if(jugador.getEquipoID() != equipo){
+            System.out.println("No se logro aceptar el traspaso.");
+            return;
+        }
+        if(jugador.getTraspaso() == Traspaso.SOLICITADO){
+            jugador.setTraspaso(Traspaso.APROBADO_ENTRENADOR);
+            System.out.println("Se logro el traspaso del jugador" + jugador.getNombre());
+        }else{
+            System.out.println("No se logro concretar el traspaso del jugador" + jugador.getNombre());
+        }
+    }
+
+    public void rechazarTraspaso(jugador jugador, equipo equipo){
+        if(jugador.getEquipoID() != equipo){
+            System.out.println("No se logro rechazar el traspaso");
+            return;
+        }
+        jugador.setTraspaso(Traspaso.RECHAZADO_ENTRENADOR);
+        System.out.println(jugador.getNombre() + "rechazado por el entranadoor");
+    }
+
 }
