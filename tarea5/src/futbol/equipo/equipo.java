@@ -277,9 +277,21 @@ public class equipo {
 
     @Override
     public String toString() {
-        return "equipo [nombre=" + nombre + ", abreviatura=" + abreviatura + ", presidenteID="
-                + presidenteID.getNombre()
-                + ", entrenadorID=" + entrenadorID.getNombre() + ", lista_jugadores=" + lista_jugadores + "]";
+        String comprobacionPresi;
+        if (presidenteID != null) {
+            comprobacionPresi = presidenteID.getnombre();
+        } else {
+            comprobacionPresi = "Ningún presidente";
+        }
+
+        String comprobacionEntrenador;
+        if (entrenadorID != null) {
+            comprobacionEntrenador = entrenadorID.getnombre();
+        } else {
+            comprobacionEntrenador = "Ningún entrenador";
+        }
+        return "equipo [nombre=" + nombre + ", abreviatura=" + abreviatura + ", presidenteID=" + comprobacionPresi
+                + ", entrenadorID=" + comprobacionEntrenador + ", lista_jugadores=" + lista_jugadores + "]";
     }
 
     public equipo getEquipoID() {

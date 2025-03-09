@@ -19,35 +19,37 @@ public abstract class trabajador {
         return trabajadoresTotales;
     }
 
-    // ------------------------------getters------------------------------
-    public String getNombreTra() {
-        return nombreTra;
+    public trabajador() {
     }
 
-    public Date getFechaNacimientoTra() {
-        return fechaNacimientoTra;
+    // ---------------------getters y setters------------------------------
+    public String getnombre() {
+        return nombre;
     }
 
-    public String getPais() {
-        return paisTra;
+    public void setnombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    // -------------------------------setters------------------------------
-    public void setNombreTra(String nombreTra) {
-        this.nombreTra = nombreTra;
+    public Date getfecha_nacimiento() {
+        return fecha_nacimiento;
     }
 
-    public void setFechaNacimientoTra(Date fechaNacimientoTra) {
-        this.fechaNacimientoTra = fechaNacimientoTra;
+    public void setFecha_nacimiento(Date fecha_nacimiento) {
+        this.fecha_nacimiento = fecha_nacimiento;
     }
 
-    public void setPaisTra(String paisTra) {
-        this.paisTra = paisTra;
+    public String getpais() {
+        return pais;
+    }
+
+    public void setpais(String pais) {
+        this.pais = pais;
     }
 
     // ------------------método mismaNacionalidad-------------------------
     public boolean mismaNacionalidad(trabajador otro) {
-        return this.paisTra.equalsIgnoreCase(otro.getPais());
+        return this.pais.equalsIgnoreCase(otro.getpais());
     }
 
     // ---------------método abstracto mostrarInfo------------------------

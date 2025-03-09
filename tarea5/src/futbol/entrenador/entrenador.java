@@ -1,5 +1,8 @@
 package futbol.entrenador;
 
+import java.util.Date;
+
+import futbol.trabajador;
 import futbol.equipo.equipo;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
@@ -73,6 +76,14 @@ public class entrenador extends trabajador {
     }
 
     
+
+    // ------------------ metodo mostrar informacion--------------------
+
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("País: " + getpais());
+    }
 
     // ----------------------uso de atributos y metodo static---------------------
 

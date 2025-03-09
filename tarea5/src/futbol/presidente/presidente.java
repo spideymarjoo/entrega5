@@ -1,5 +1,8 @@
 package futbol.presidente;
 
+import java.util.Date;
+
+import futbol.trabajador;
 import futbol.equipo.equipo;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;
@@ -13,6 +16,7 @@ import java.util.Date;
 public class presidente extends trabajador {
     private String nombre;
     private String dni;
+    private Date fecha_nacimiento;
     private equipo equipoID;
     private static int presidentesTotales = 0;
 
@@ -42,9 +46,11 @@ public class presidente extends trabajador {
         presidentesTotales++;
     }
 
+    @Override
     public void mostrarInfo(){
         System.out.println(nombre + "tipo presidente");
     }
+    // ------------------ metodo mostrar informacion--------------------
 
     // ----------------------uso de atributos y metodo static---------------------
 
@@ -66,7 +72,7 @@ public class presidente extends trabajador {
      * @return Nombre del presidente.
      */
 
-    public String getNombre() {
+    public String getnombre() {
         return nombre;
     }
 
@@ -76,7 +82,7 @@ public class presidente extends trabajador {
      * @param nombre Nombre del presidente.
      */
 
-    public void setNombre(String nombre) {
+    public void setnombre(String nombre) {
         if (nombre != null) {
             this.nombre = nombre;
         } else {
@@ -91,7 +97,7 @@ public class presidente extends trabajador {
      * @return DNI del presidente.
      */
 
-    public String getDni() {
+    public String getdni() {
         return dni;
     }
 
@@ -101,7 +107,7 @@ public class presidente extends trabajador {
      * @param dni DNI del presidente.
      */
 
-    public void setDni(String dni) {
+    public void setdni(String dni) {
         if (dni != null) {
             this.dni = dni;
         } else {
@@ -115,7 +121,7 @@ public class presidente extends trabajador {
      * @return Equipo del presidente.
      */
 
-    public equipo getEquipoID() {
+    public equipo getequipoID() {
         return equipoID;
     }
 
@@ -125,7 +131,7 @@ public class presidente extends trabajador {
      * @param equipoID Equipo del presidente.
      */
 
-    public void setEquipoID(equipo equipoID) {
+    public void setequipoID(equipo equipoID) {
         if (equipoID != null) {
             this.equipoID = equipoID;
         } else {

@@ -17,30 +17,28 @@ public class jugador extends trabajador {
     private Date fecha_nacimiento;
     private String pais;
     private Posicion posicion;
-    private int numdorsal;
+    private int numDorsal;
     private equipo equipoID;
-    public Traspaso traspaso;
+    public Traspaso traspaso_jugador;
     private static int jugadoresTotales = 0;
 
+    // ------------------Nuestro Constructor----------------------
     /**
      * Constructor de la clase jugador.
      *
-     * @param nombre_jugador   Nombre del jugador.
+     * @param nombre           Nombre del jugador.
      * @param fecha_nacimiento Fecha de nacimiento del jugador.
      * @param pais             País de origen del jugador.
      * @param posicion         Posición en la que juega el jugador.
-     * @param dorsal_jugador   Número de dorsal del jugador.
+     * @param numDorsal        Número de dorsal del jugador.
      * @param traspaso_jugador Estado de traspaso del jugador.
-     * @param equipoID         Equipo al que pertenece el jugador.
+     * @param equipoID         equipo al que pertenece el jugador.
      */
-
-    // --------------------------------------------Nuestro
-    // Constructor----------------------------------------
-    public jugador(String nombre_jugador, Date fecha_nacimiento, String pais, Posicion posicion, int dorsal_jugador,
+    public jugador(String nombre, Date fecha_nacimiento, String pais, Posicion posicion, int numDorsal,
             Traspaso traspaso_jugador, equipo equipoID) {
         super(nombre_jugador, fecha_nacimiento, pais);
-        if (nombre_jugador != null) {
-            this.nombre = nombre_jugador;
+        if (nombre != null) {
+            this.nombre = nombre;
         } else {
             System.out.println("Nombre no reconocido");
             this.nombre = "No reconocido";
@@ -63,22 +61,29 @@ public class jugador extends trabajador {
             System.out.println("Posicion no reconocida");
             this.posicion = posicion.RESERVA;
         }
-        if (dorsal_jugador >= 1) {
-            this.numdorsal = dorsal_jugador;
+        if (numDorsal >= 1) {
+            this.numDorsal = numDorsal;
         } else {
             System.out.println("Error dorsal");
-            this.numdorsal = 0;
+            this.numDorsal = 0;
         }
         if (traspaso_jugador != null) {
-            this.traspaso = traspaso_jugador;
+            this.traspaso_jugador = traspaso_jugador;
         } else {
             System.out.println("Error traspaso");
-            this.traspaso = traspaso.SIN_SOLICITAR;
+            this.traspaso_jugador = traspaso_jugador.SIN_SOLICITAR;
         }
         jugadoresTotales++;
     }
     public void mostrarInfo(){
         System.out.println(nombre + "tipo jugador");
+    }
+
+    // ------------------ metodo mostrar informacion--------------------
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Información del Jugador:");
+        System.out.println("Nombre: " + nombre);
     }
 
     // ----------------------uso de atributos y metodo static---------------------
@@ -121,7 +126,7 @@ public class jugador extends trabajador {
     /**
      * Obtiene el equipo al que pertenece el jugador.
      * 
-     * @return Equipo del jugador.
+     * @return equipo del jugador.
      */
 
     public equipo getEquipoID() {
@@ -138,7 +143,7 @@ public class jugador extends trabajador {
         if (equipoID != null) {
             this.equipoID = equipoID;
         } else {
-            System.out.println("Equipo no reconocido");
+            System.out.println("equipo no reconocido");
         }
     }
 
@@ -220,7 +225,7 @@ public class jugador extends trabajador {
      */
 
     public int getDorsal() {
-        return numdorsal;
+        return numDorsal;
     }
 
     /**
@@ -231,10 +236,10 @@ public class jugador extends trabajador {
 
     public void setDorsal(int dorsal) {
         if (dorsal >= 1) {
-            this.numdorsal = dorsal;
+            this.numDorsal = dorsal;
         } else {
             System.out.println("Error, ...");
-            this.numdorsal = 0;
+            this.numDorsal = 0;
         }
     }
 
@@ -245,7 +250,7 @@ public class jugador extends trabajador {
      */
 
     public Traspaso getTraspaso() {
-        return traspaso;
+        return traspaso_jugador;
     }
 
     /**
@@ -256,7 +261,7 @@ public class jugador extends trabajador {
 
     public void setTraspaso(Traspaso traspaso) {
         if (traspaso != null) {
-            this.traspaso = traspaso;
+            this.traspaso_jugador = traspaso;
         } else {
             System.out.println("Error de traspaso");
         }
