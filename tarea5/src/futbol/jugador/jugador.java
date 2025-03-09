@@ -36,6 +36,7 @@ public class jugador extends trabajador {
      */
     public jugador(String nombre, Date fecha_nacimiento, String pais, Posicion posicion, int numDorsal,
             Traspaso traspaso_jugador, equipo equipoID) {
+        super(nombre_jugador, fecha_nacimiento, pais);
         if (nombre != null) {
             this.nombre = nombre;
         } else {
@@ -73,6 +74,9 @@ public class jugador extends trabajador {
             this.traspaso_jugador = traspaso_jugador.SIN_SOLICITAR;
         }
         jugadoresTotales++;
+    }
+    public void mostrarInfo(){
+        System.out.println(nombre + "tipo jugador");
     }
 
     // ------------------ metodo mostrar informacion--------------------
@@ -268,13 +272,10 @@ public class jugador extends trabajador {
      * 
      * @return Información del jugador en formato legible.
      */
-
-    // --------------------------------------------metodo
-    // toString---------------------------------------------
     @Override
     public String toString() {
-        return "jugador [nombre=" + nombre + ", fecha_nacimiento=" + fecha_nacimiento + ", pais=" + pais + ", posicion="
-                + posicion + ", numDorsal=" + numDorsal + ", traspaso=" + traspaso_jugador + "]";
+        return "jugador [posicion=" + posicion + ", numdorsal=" + numdorsal + ", equipoID=" + equipoID.getNombre() + ", traspaso="
+                + traspaso + ", getNombreTra()=" + getNombreTra() + ", getFechaNacimientoTra()="
+                + getFechaNacimientoTra() + ", getPais()=" + getPais() + "]";
     }
-
 }

@@ -4,6 +4,10 @@ import java.util.Date;
 
 import futbol.trabajador;
 import futbol.equipo.equipo;
+import futbol.jugador.Traspaso;
+import futbol.jugador.jugador;
+import futbol.trabajador;
+import java.util.Date;
 
 /**
  * Representa un entrenador de fútbol con su nombre, formación preferida y
@@ -28,7 +32,9 @@ public class entrenador extends trabajador {
      */
 
     // -------------------------nuestro constructor-------------------------
-    public entrenador(String nombre, formaciones formacionPreferida, equipo equipoID) {
+    public entrenador(String nombre, Date fechaNacimiento, String paisOrigen, formaciones formacionPreferida,
+            equipo equipoID) {
+        super(nombre, fechaNacimiento, paisOrigen);
         if (nombre != null) {
             this.nombre = nombre;
         } else {
@@ -43,6 +49,33 @@ public class entrenador extends trabajador {
         }
         entrenadoresTotales++;
     }
+    public void mostrarInfo(){
+        System.out.println(nombre + "tipo entrenador");
+    }
+    
+    public void aprobarTraspaso(jugador jugador, equipo equipo){
+        if(jugador.getEquipoID() != equipo){
+            System.out.println("No se logro aceptar el traspaso.");
+            return;
+        }
+        if(jugador.getTraspaso() == Traspaso.SOLICITADO){
+            jugador.setTraspaso(Traspaso.APROBADO_ENTRENADOR);
+            System.out.println("Se logro el traspaso del jugador" + jugador.getNombre());
+        }else{
+            System.out.println("No se logro concretar el traspaso del jugador" + jugador.getNombre());
+        }
+    }
+
+    public void rechazarTraspaso(jugador jugador, equipo equipo){
+        if(jugador.getEquipoID() != equipo){
+            System.out.println("No se logro rechazar el traspaso");
+            return;
+        }
+        jugador.setTraspaso(Traspaso.RECHAZADO_ENTRENADOR);
+        System.out.println(jugador.getNombre() + "rechazado por el entranadoor");
+    }
+
+    
 
     // ------------------ metodo mostrar informacion--------------------
 
@@ -138,19 +171,23 @@ public class entrenador extends trabajador {
         }
 
     }
+    
 
     // -----------------------------metodo toString-------------------------------
 
+    
     /**
      * Representación en cadena del objeto entrenador.
      * 
      * @return Cadena con los datos del entrenador.
      */
 
-    @Override
-    public String toString() {
-        return "entrenador [nombre=" + nombre + ", formacionPreferida=" + formacionPreferida + ", equipoID=" + equipoID
-                + "]";
-    }
+     @Override
+     public String toString() {
+        String equipo = (equipoID != null) ? equipoID.getNombre() : "No existe";
+         return "entrenador [formacionPreferida=" + formacionPreferida + ", equipoID=" + equipo + ", getNombreTra()="
+                 + getNombreTra() + ", getFechaNacimientoTra()=" + getFechaNacimientoTra() + ", getPais()=" + getPais()
+                 + "]";
+     }
 
 }
