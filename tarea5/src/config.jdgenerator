@@ -1,15 +1,169 @@
 ==== CONFIGS ====		
 {
-    "base_path": "c:\\Users\\emili\\OneDrive\\Documentos\\entrega5\\tarea5\\src",
-    "out": "c:\\Users\\emili\\OneDrive\\Documentos\\entrega5\\tarea5\\src\\javadoc",
-    "javadoc_executable": "undefined\\bin\\",
+    "base_path": "c:\\Users\\majun\\OneDrive\\Documentos\\entrega5\\tarea5\\src",
+    "out": "c:\\Users\\majun\\OneDrive\\Documentos\\entrega5\\tarea5\\src\\javadoc",
+    "javadoc_executable": "C:\\Program Files\\Java\\jdk-23\\bin\\javadoc.exe",
     "exclude": [],
     "raw_params": ""
 }
 
-==== ERRORS ====
-	Could not find a valid javadoc executable located in: 
-	undefined\bin\
-	Cannot find the specified Javadoc executable
+==== COMMAND ====
+"C:\Program Files\Java\jdk-23\bin\javadoc.exe" 
+	-sourcepath "c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src" 
+	-d "c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc" 
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\App.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\entrenador.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\formaciones.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\equipo\equipo.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\interfaces\gestortraspasos.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\jugador.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Posicion.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Traspaso.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\presidente\presidente.java"
+	"c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\trabajador\trabajador.java"
+
+
+==== JAVADOC OUTPUT ====
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\App.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\entrenador.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\formaciones.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\equipo\equipo.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\interfaces\gestortraspasos.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\jugador.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Posicion.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Traspaso.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\presidente\presidente.java...
+Loading source file c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\trabajador\trabajador.java...
+Constructing Javadoc information...
+Building index for all the packages and classes...
+Standard Doclet version 23+37-2369
+Building tree for all the packages and classes...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\App.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\App.java:19: warning: use of default constructor, which does not provide a comment
+public class App {
+       ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\entrenador\entrenador.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\entrenador.java:32: warning: no @param for fechaNacimiento
+    public entrenador(String nombre, Date fechaNacimiento, String paisOrigen, formaciones formacionPreferida,
+           ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\entrenador.java:32: warning: no @param for paisOrigen
+    public entrenador(String nombre, Date fechaNacimiento, String paisOrigen, formaciones formacionPreferida,
+           ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\entrenador.java:54: warning: no comment
+    public void aprobarTraspaso(jugador jugador, equipo equipo) {
+                ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\entrenador.java:67: warning: no comment
+    public void rechazarTraspaso(jugador jugador, equipo equipo) {
+                ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\equipo\equipo.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\equipo\equipo.java:321: warning: no comment
+    public equipo getEquipoID() {
+                  ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\equipo\equipo.java:329: warning: no comment
+    public static int getEquiposTotales() {
+                      ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\equipo\equipo.java:325: warning: no comment
+    public void setEquipoID(equipo equipoID) {
+                ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\equipo\equipo.java:333: warning: no comment
+    public static void setEquiposTotales(int equiposTotales) {
+                       ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\entrenador\formaciones.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\formaciones.java:11: warning: no comment
+    CINCO_TRES_DOS,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\formaciones.java:10: warning: no comment
+    CUATRO_CINCO_UNO,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\formaciones.java:8: warning: no comment
+    CUATRO_CUATRO_DOS,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\formaciones.java:9: warning: no comment
+    CUATRO_TRES_TRES,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\entrenador\formaciones.java:12: warning: no comment
+    NOEXISTENTE;
+    ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\interfaces\gestortraspasos.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\jugador\jugador.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\jugador.java:22: warning: no comment
+    public Traspaso traspaso_jugador;
+                    ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\jugador\Posicion.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Posicion.java:10: warning: no comment
+    CENTROCAMPISTA,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Posicion.java:11: warning: no comment
+    DEFENSA,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Posicion.java:8: warning: no comment
+    DELANTERO,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Posicion.java:9: warning: no comment
+    PORTERO,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Posicion.java:12: warning: no comment
+    RESERVA;
+    ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\presidente\presidente.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\presidente\presidente.java:29: warning: no @param for fecha_nacimiento
+    public presidente(String nombre, Date fecha_nacimiento, String paisOrigen, String dni, equipo equipoID) {
+           ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\presidente\presidente.java:29: warning: no @param for paisOrigen
+    public presidente(String nombre, Date fecha_nacimiento, String paisOrigen, String dni, equipo equipoID) {
+           ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\presidente\presidente.java:150: warning: no comment
+    public void aprobarTraspaso(jugador jugador, equipo equipo) {
+                ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\presidente\presidente.java:163: warning: no comment
+    public void rechazarTraspaso(jugador jugador, equipo equipo) {
+                ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\trabajador\trabajador.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\trabajador\trabajador.java:19: warning: no comment
+    public static int trabajadoresTotales = 0;
+                      ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\jugador\Traspaso.html...
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Traspaso.java:11: warning: no comment
+    APROBADO_ENTRENADOR,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Traspaso.java:12: warning: no comment
+    APROBADO_PRESIDENTE,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Traspaso.java:13: warning: no comment
+    RECHAZADO_ENTRENADOR,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Traspaso.java:14: warning: no comment
+    RECHAZADO_PRESIDENTE;
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Traspaso.java:9: warning: no comment
+    SIN_SOLICITAR,
+    ^
+c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\futbol\jugador\Traspaso.java:10: warning: no comment
+    SOLICITADO,
+    ^
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\package-summary.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\package-tree.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\entrenador\package-summary.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\entrenador\package-tree.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\equipo\package-summary.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\equipo\package-tree.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\interfaces\package-summary.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\interfaces\package-tree.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\jugador\package-summary.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\jugador\package-tree.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\presidente\package-summary.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\presidente\package-tree.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\trabajador\package-summary.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\futbol\trabajador\package-tree.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\overview-tree.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\index.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\allclasses-index.html...
+Building index for all classes...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\allpackages-index.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\index-all.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\search.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\overview-summary.html...
+Generating c:\Users\majun\OneDrive\Documentos\entrega5\tarea5\src\javadoc\help-doc.html...
+31 warnings
 
 

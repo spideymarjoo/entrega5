@@ -212,6 +212,9 @@ public class equipo {
 
     }
 
+    /**
+     * Restablece el estado de traspaso de los jugadores según las condiciones.
+     */
     public void nuevoEstadoTraspaso() {
         for (jugador jugador : lista_jugadores) {
             if (jugador.getTraspaso() == Traspaso.RECHAZADO_PRESIDENTE ||
@@ -222,9 +225,14 @@ public class equipo {
         System.out.println("Este es el nuevo estado de los jugadores " + nombre);
     }
 
-    // ------------------------------- ejercicio 5
-    // resetear-----------------------------------------
+    // -------------- ejercicio 5 resetear-----------------
 
+    /**
+     * Gestiona el traspaso de un jugador por parte del entrenador.
+     * 
+     * @param jugador El jugador a evaluar.
+     * @param acepta  Indica si el entrenador aprueba el traspaso.
+     */
     public void traspasosEntrenador(jugador jugador, boolean acepta) {
         if (jugador.getEquipoID() != this) {
             System.out.println("Este no es el entrenador del jugador.");
@@ -239,6 +247,12 @@ public class equipo {
         }
     }
 
+    /**
+     * Gestiona el traspaso de un jugador por parte del presidente.
+     * 
+     * @param jugador El jugador a evaluar.
+     * @param acepta  Indica si el presidente aprueba el traspaso.
+     */
     public void traspasosPresidente(jugador jugador, boolean acepta) {
         if (jugador.getEquipoID() != this) {
             System.out.println("Este no es el presidente del jugador");
@@ -253,6 +267,11 @@ public class equipo {
         }
     }
 
+    /**
+     * Añade un nuevo jugador al equipo.
+     * 
+     * @param jugador El jugador a añadir.
+     */
     public void nuevoJugador(jugador jugador) {
         if (jugador != null && !lista_jugadores.contains(jugador)) {
             lista_jugadores.add(jugador);
@@ -260,6 +279,11 @@ public class equipo {
         }
     }
 
+    /**
+     * Elimina un jugador del equipo.
+     * 
+     * @param jugador El jugador a eliminar.
+     */
     public void borrarJugador(jugador jugador) {
         if (jugador != null && lista_jugadores.contains(jugador)) {
             lista_jugadores.remove(jugador);

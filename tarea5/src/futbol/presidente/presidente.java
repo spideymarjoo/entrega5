@@ -1,7 +1,7 @@
 package futbol.presidente;
 
 import java.util.Date;
-import futbol.trabajador;
+import futbol.trabajador.trabajador;
 import futbol.equipo.equipo;
 import futbol.jugador.Traspaso;
 import futbol.jugador.jugador;

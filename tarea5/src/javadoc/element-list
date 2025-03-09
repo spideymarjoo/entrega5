@@ -1,5 +1,7 @@
 unnamed package
 futbol.entrenador
 futbol.equipo
+futbol.interfaces
 futbol.jugador
 futbol.presidente
+futbol.trabajador

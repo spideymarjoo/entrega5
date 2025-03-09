@@ -1,6 +1,6 @@
 package futbol.jugador;
 
-import futbol.trabajador;
+import futbol.trabajador.trabajador;
 import futbol.equipo.equipo;
 import java.util.Date;
 
